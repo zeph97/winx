@@ -14,22 +14,22 @@ _winx_ is the core of WinxGui library, of course. It depends _winsdk_(optional),
 
 WinxGui source code tree looks like this:
 
-¡¡¡¡©À©¤stdext
-¡¡¡¡©¦  ©¸©¤include
-¡¡¡¡©À©¤winx
-¡¡¡¡©¦  ©À©¤include
-¡¡¡¡©¦  ©À©¤bin
-¡¡¡¡©¦  ©À©¤lib
-¡¡¡¡©¦  ©¸©¤src
-¡¡¡¡©À©¤winxsamp
-¡¡¡¡©¦  ©À©¤samples
-¡¡¡¡©¦  ©¸©¤tutorials
-¡¡¡¡©À©¤winsdk
-¡¡¡¡©¦  ©À©¤bin
-¡¡¡¡©¦  ©À©¤include
-¡¡¡¡©¦  ©¸©¤lib
-¡¡¡¡©¸©¤wtl
-¡¡¡¡    ©¸©¤include
+    |-stdext
+    |   |-include
+    |-winx
+    |   |-include
+    |   |-bin
+    |   |-lib
+    |   |-src
+    |-winxsamp
+    |   |-samples
+    |   |-tutorials
+    |-winsdk
+    |   |-bin
+    |   |-include
+    |   |-lib
+    |-wtl
+        |-include
 
 I have introduced _stdext_, _winx_, _winsdk_, _wtl_ with you. And _winxsamp_ is examples of WinxGui applications. It is composed of _tutorials_ and _samples_. _tutorials_ are very simple. Mostly a tutorial application only shows ONE feature of WinxGui library. See [Tutorials WinxGui Tutorials]. _samples_ are somewhat complex and useful. See [Samples WinxGui Samples].
 
