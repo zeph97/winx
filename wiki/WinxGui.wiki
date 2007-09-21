@@ -13,7 +13,7 @@ _stdext_ is a GUI-less library. _stdext_ means STL (Standard Template Library) e
 _winx_ is the core of WinxGui library, of course. It depends _winsdk_(optional), _wtl_, and _stdext_. You may ask me why you based on _wtl_? In _[WinxGuiImpl How does WinxGui works]_ I will answer the question.
 
 WinxGui source code tree looks like this:
-
+{{{
     |-stdext
     |   |-include
     |-winx
@@ -30,7 +30,7 @@ WinxGui source code tree looks like this:
     |   |-lib
     |-wtl
         |-include
-
+}}}
 I have introduced _stdext_, _winx_, _winsdk_, _wtl_ with you. And _winxsamp_ is examples of WinxGui applications. It is composed of _tutorials_ and _samples_. _tutorials_ are very simple. Mostly a tutorial application only shows ONE feature of WinxGui library. See [Tutorials WinxGui Tutorials]. _samples_ are somewhat complex and useful. See [Samples WinxGui Samples].
 
 
