@@ -1,15 +1,40 @@
-#summary One-sentence summary of this page.
+#summary How to develop WinxGui applications.
+#labels WinxGui,Manual,Featured
+
 
 = Introduction =
 
-Add your content here.
+WinxGui is composed of some sub-libraries. They are _winsdk_, _wtl_, _stdext_, _winx_.
+
+_winsdk_, _wtl_ are 3rdparty libraries. _winsdk_ is Windows Platform SDK, which is provided by Microsoft. _wtl_ is Windows Template Library. It is a C++ library for developing Windows applications and UI components. It extends ATL (Active Template Library) and provides a set of classes for controls, dialogs, frame windows, GDI objects, and more. 
+
+_stdext_ is a GUI-less library. _stdext_ means STL (Standard Template Library) extensions. It extends STL and provides a set of classes for diagnosis, memory management, unit tests, file io, etc. _stdext_ is self systematic. It depends nothing else, and you can use it freely. For more information, see [StdExt StdExt Developer Manual].
+
+_winx_ is the core of WinxGui library, of course. It depends _winsdk_(optional), _wtl_, and _stdext_. You may ask me why you based on _wtl_? In _[WinxGuiImpl How does WinxGui works]_ I will answer the question.
+
+WinxGui source code tree looks like this:
+
+¡¡¡¡©À©¤stdext
+¡¡¡¡©¦  ©¸©¤include
+¡¡¡¡©À©¤winx
+¡¡¡¡©¦  ©À©¤include
+¡¡¡¡©¦  ©À©¤bin
+¡¡¡¡©¦  ©À©¤lib
+¡¡¡¡©¦  ©¸©¤src
+¡¡¡¡©À©¤winxsamp
+¡¡¡¡©¦  ©À©¤samples
+¡¡¡¡©¦  ©¸©¤tutorials
+¡¡¡¡©À©¤winsdk
+¡¡¡¡©¦  ©À©¤bin
+¡¡¡¡©¦  ©À©¤include
+¡¡¡¡©¦  ©¸©¤lib
+¡¡¡¡©¸©¤wtl
+¡¡¡¡    ©¸©¤include
+
+I have introduced _stdext_, _winx_, _winsdk_, _wtl_ with you. And _winxsamp_ is examples of WinxGui applications. It is composed of _tutorials_ and _samples_. _tutorials_ are very simple. Mostly a tutorial application only shows ONE feature of WinxGui library. See [Tutorials WinxGui Tutorials]. _samples_ are somewhat complex and useful. See [Samples WinxGui Samples].
 
 
 = Details =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+todo
 
- 
