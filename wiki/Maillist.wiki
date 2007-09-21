@@ -4,6 +4,7 @@
 = Introduction =
 
 WinxGui maillist is [mailto:winxgui@gmail.com winxgui@gmail.com].
+
 You can post any question to the maillist. And your questions will be forward to http://groups.google.com/group/winx automatically.
 
 
@@ -12,6 +13,7 @@ You can post any question to the maillist. And your questions will be forward to
 How to join in WinxGui maillist? You can:
   * Join in http://groups.google.com/group/winx, and get messages from it(http://groups.google.com/group/winx/subscribe).
   * Mail to [mailto:xushiweizh@gmail.com xushiweizh@gmail.com] to apply.
+ 
  
  
  
