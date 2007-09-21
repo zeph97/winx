@@ -1,6 +1,4 @@
-#summary One-sentence summary of this page.
 #labels Maillist,Featured
-
 = Introduction =
 
 WinxGui maillist is [mailto:winxgui@gmail.com winxgui@gmail.com]. You can post any question to the maillist. And your questions will be forward to http://groups.google.com/group/winx automatically.
