@@ -10,7 +10,7 @@ _winsdk_, _wtl_ are 3rdparty libraries. _winsdk_ is Windows Platform SDK, which 
 
 _stdext_ is a GUI-less library. _stdext_ means STL (Standard Template Library) extensions. It extends STL and provides a set of classes for diagnosis, memory management, unit tests, file io, etc. _stdext_ is self systematic. It depends nothing else, and you can use it freely. For more information, see [StdExt StdExt Developer Manual].
 
-_winx_ is the core of WinxGui library, of course. It depends _winsdk_(optional), _wtl_, and _stdext_. You may ask me why you based on WTL. In _[WinxGuiImpl How does WinxGui works]_ I will answer the question.
+_winx_ is the core of WinxGui library, of course. It depends _winsdk_(optional), _wtl_, and _stdext_. You may ask me why you based on WTL. In [WinxGuiImpl How does WinxGui works] I will answer the question.
 
 WinxGui source code tree looks like this:
 {{{
@@ -34,7 +34,16 @@ WinxGui source code tree looks like this:
 I have introduced _stdext_, _winx_, _winsdk_, _wtl_ with you. And _winxsamp_ is examples of WinxGui applications. It is composed of _tutorials_ and _samples_. _tutorials_ are very simple. Mostly a tutorial application only shows ONE feature of WinxGui library. See [Tutorials WinxGui Tutorials]. _samples_ are somewhat complex and useful. See [Samples WinxGui Samples].
 
 
-= Details =
+= Start to learn WinxGui =
 
-todo
+If you develop a GUI-less application, [StdExt StdExt Developer Manual] may more appropriate to you. Here we only talk about GUI applications developement. Here is some hints to show how WinxGui applications looks:
+  * [HelloWorld Hello world!]
+  * [DialogApp How to write a dialog application?]
+  * [CreateUserCtrl How to create a user window/control?]
 
+You also can refer to [Tutorials WinxGui Tutorials] and [Samples WinxGui Samples].
+
+
+= WinxGui Components =
+
+todo.
