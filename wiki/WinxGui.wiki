@@ -36,7 +36,7 @@ I have introduced _stdext_, _winx_, _winsdk_, _wtl_ with you. And _winxsamp_ is 
 
 = Start to learn WinxGui =
 
-If you develop a GUI-less application, [StdExt StdExt Developer Manual] may more appropriate to you. Here we only talk about GUI applications developement. Here is some hints to show how WinxGui applications looks:
+If you develop a GUI-less application, [StdExt StdExt Developer Manual] may more appropriate to you. Here we only talk about GUI applications developement. Here are some hints to show what WinxGui applications looks like:
   * [HelloWorld Hello world!]
   * [DialogApp How to write a dialog application?]
   * [CreateUserCtrl How to create a user window/control?]
