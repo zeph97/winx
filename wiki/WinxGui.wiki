@@ -14,7 +14,7 @@ _winx_ is the core of WinxGui library, of course. It depends _winsdk_(optional),
 
 WinxGui source code tree looks like this:
 {{{
-    |-stdext
+     |-stdext
     |   |-include
     |-winx
     |   |-include
