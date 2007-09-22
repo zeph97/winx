@@ -1,1 +1,14 @@
-todo
+#summary Components included in StdExt library.
+#labels StdExt,Manual,Featured
+
+
+= Introduction =
+
+StdExt means STL (Standard Template Library) extensions. It extends STL and provides a set of classes for diagnosis, memory management, unit tests, file io, etc.
+
+Why I develop StdExt, since there are STL, Boost, Loki libraries?
+
+
+= StdExt Components =
+
+todo.
