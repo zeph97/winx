@@ -14,7 +14,7 @@
 
 * Tutorials
 
-	# Modeless Dialog Application: tutorials/winx/step022-modeless
+	# Modeless Dialog Application: [http://winxsamp.googlecode.com/svn/trunk/winxsamp/tutorials/winx/step022-modeless/ tutorials/winx/step022-modeless]
 
 * WINX-Core
 
