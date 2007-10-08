@@ -1,2 +1,2 @@
-#labels Property
+#labels Deprecated
 Deprecated. See [WINX_ACCELFRAME].
