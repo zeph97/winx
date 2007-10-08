@@ -1,7 +1,6 @@
-#summary ChangLog of WinxGui v1.2
+#summary ChangLog of WinxGui v1.2 (2007-06-10)
 #labels ChangeLog
 
-== Changes for 1.2 (2007-06-10) ==
 
 * Wizard for Visual C++ 6.0
 
