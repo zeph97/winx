@@ -21,13 +21,13 @@
 	# MessageFilter
 		* property: [WINX_MSGFILTER], [WINX_MSGFILTER WINX_MSGFILTER_NULL]
 		* function: RunMsgLoop
-		* class: MessageHook, AutoMessageHook (remove SimpleHook)
+		* class: MessageHook, [MessageHook AutoMessageHook] (remove SimpleHook)
 		* class: MessageFilter
 		* class ModelessDialog support MessageFilter in default
 	# MainFrame
 		* ModalDialog -> ModelDialog
 		* ModalessDialog -> ModelessDialog
-		* class: MainDlgFrame, AxMainDlgFrame
+		* class: MainDlgFrame, [MainDlgFrame AxMainDlgFrame]
 		* property: [WINX_MAINFRAME]
 		* message: OnMainFrameTerm
 	# Modeless support (function: RunMsgLoop)
