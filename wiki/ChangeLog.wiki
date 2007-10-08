@@ -1,94 +1,95 @@
 #summary History of WinxGui library.
 #labels WinxGui,ChangeLog,Featured
 
-Changes for 1.2 (2007-06-10)
------------------------------------------
 
-*) Wizard for Visual C++ 6.0
 
-	- enable/disable warning of directory tree.
-	- l10n: support non-english language resources.
-	- change wizard icon.
-	- support modeless dialog.
-	- bugfix - uninitial var: CComModule _Module.
+== Changes for 1.2 (2007-06-10) ==
 
-*) Tutorials
+* Wizard for Visual C++ 6.0
 
-	- Modeless DialogApp		tutorials/winx/step022-modeless
+	# enable/disable warning of directory tree.
+	# l10n: support non-english language resources.
+	# change wizard icon.
+	# support modeless dialog.
+	# bugfix - uninitial var: CComModule _Module.
 
-*) WINX-Core
+* Tutorials
 
-	- MessageFilter
+	# Modeless Dialog Application		tutorials/winx/step022-modeless
+
+* WINX-Core
+
+	# MessageFilter
 		property: WINX_MSGFILTER, WINX_MSGFILTER_NULL
 		function: RunMsgLoop
 		class: MessageHook, AutoMessageHook (remove SimpleHook)
 		class: MessageFilter
 		class: ModelessDialog default support MessageFilter
 
-	- MainFrame
+	# MainFrame
 		ModalDialog -> ModelDialog
 		ModalessDialog -> ModelessDialog
 		class: MainDlgFrame, AxMainDlgFrame
 		property: WINX_MAINFRAME
 		message: OnMainFrameTerm
 
-	- Modeless support (function: RunMsgLoop)
+	# Modeless support (function: RunMsgLoop)
 
-	- WINX_DLG_ACCEL -> WINX_ACCELFRAME
-	- Accel bugfix: Menu can't receive its keyboard messages after hooking.
+	# WINX_DLG_ACCEL -> WINX_ACCELFRAME
+	# Accel bugfix: Menu can't receive its keyboard messages after hooking.
 
-*) STL-Extension
+* STL-Extension
 
-	- remove STD_DELETE macro. use alloc.destroy(obj), instead of STD_DELETE(alloc, obj).
+	# remove STD_DELETE macro. use alloc.destroy(obj), instead of STD_DELETE(alloc, obj).
+
 
 	
-Changes for 1.1.08 (2007-02-09)
------------------------------------------
+== Changes for 1.1.08 (2007-02-09) ==
 
-*) Wizard for Visual C++ 6.0
+* Wizard for Visual C++ 6.0
 
-*) Supported Compilers
+* Supported Compilers
 
-	- Visual C++ 6.0
-	- Visual C++ 2003
-	- Visual C++ 2005
-	- remove support of Mingw32 temporarily, because of atl License.
+	# Visual C++ 6.0
+	# Visual C++ 2003
+	# Visual C++ 2005
+	# remove support of Mingw32 temporarily, because of atl License.
 
-*) Tutorials
+* Tutorials
 
-	- LookNFeel(XP Menu)					tutorials/winx/step020-xp-menu
-	- APIHook(Local)						tutorials/winx/step021-api-hook/01.basic
-	- APIHook(Global)						tutorials/winx/step021-api-hook/02.global
+	# LookNFeel(XP Menu)					tutorials/winx/step020-xp-menu
+	# APIHook(Local)						tutorials/winx/step021-api-hook/01.basic
+	# APIHook(Global)						tutorials/winx/step021-api-hook/02.global
 
-*) WINX-Extension
+* WINX-Extension
 
-   - LookNFeel, XPMenu (see winx/LookNFeel.h)
+   # LookNFeel, XPMenu (see winx/LookNFeel.h)
 		WINX_APP_MENU
 		WINX_APP_LOOKNFEEL
 	 Contributor (Idea & Implementation): renfengxing@gmail.com
 
-   - APIHook (see winx/APIHook.h)
+   # APIHook (see winx/APIHook.h)
 		class APIHook, AutoAPIHook, etc
 
-*) WINX-Core
+* WINX-Core
 
-   - IDispatch call (see winx/Dispatch.h)
+   # IDispatch call (see winx/Dispatch.h)
 		class DispatchHandle
 		class DispatchMethod, ExDispatchMethod
 		class DispatchFunction, ExDispatchFunction
 		class DispatchProperty, ExDispatchProperty
    
-*) STL-Extension
+* STL-Extension
 
-	- FileMapping (see stdext/FileMapping.h)
+	# FileMapping (see stdext/FileMapping.h)
 		class FileMapping
 		class SimpleFileMapping, SimpleFileMappingRO
 
-	- Registry (see stdext/Registry.h)
+	# Registry (see stdext/Registry.h)
 		class WinRegKeyHandle
 		class WinRegReadKey, WinRegWriteKey
 	
-	- ScopeDebug (see stdext/ScopeDebug.h)
+	# ScopeDebug (see stdext/ScopeDebug.h)
 		class CheckException
 		class ScopeLog, OutputScopeLog, ErrorScopeLog, FileScopeLog
 		class ThreadLog
@@ -99,33 +100,32 @@ Changes for 1.1.08 (2007-02-09)
 		Idea Contributor: sting.feng@gmail.com
 		Article: http://blog.csdn.net/singlerace/archive/2007/01/12/1481441.aspx
 		
-	- std::replaceText algorithm, etc.
+	# std::replaceText algorithm, etc.
 
 
 
-Changes for 1.1.07 (2007-11-29)
------------------------------------------
+== Changes for 1.1.07 (2007-11-29) ==
 
-*) Supported Compilers
-	- Visual C++ 6.0
-	- Visual C++ 2003
-	- Visual C++ 2005
-	- Mingw32
+* Supported Compilers
+	# Visual C++ 6.0
+	# Visual C++ 2003
+	# Visual C++ 2005
+	# Mingw32
 
-*) Tutorials
-	- ScrollWindow(Basic)					tutorials/winx/step019-scroll-window/1.basic
-	- A Simple ImageViewer					tutorials/winx/step019-scroll-window/2.imageview
-	- FormView (ScrollWindow of Dialog)		tutorials/winx/step019-scroll-window/3.formview
-	- ZoomView (ZoomScrollWindow)			tutorials/winx/step019-scroll-window/4.zoomview
+* Tutorials
+	# ScrollWindow(Basic)					tutorials/winx/step019-scroll-window/1.basic
+	# A Simple ImageViewer					tutorials/winx/step019-scroll-window/2.imageview
+	# FormView (ScrollWindow of Dialog)		tutorials/winx/step019-scroll-window/3.formview
+	# ZoomView (ZoomScrollWindow)			tutorials/winx/step019-scroll-window/4.zoomview
 
-*) WINX-Extension
-   - class ScrollWindow, ZoomScrollWindow
-   - class FormWindow, AxFormWindow
+* WINX-Extension
+    # class ScrollWindow, ZoomScrollWindow
+    # class FormWindow, AxFormWindow
    
-*) STL-Extension
-	- implement __uuidof keyword in non-VC++ compilers.
+* STL-Extension
+	# implement __uuidof keyword in non-VC++ compilers.
 
-*) Port ATL 3.0 to Mingw32
+* Port ATL 3.0 to Mingw32
 
 
 
