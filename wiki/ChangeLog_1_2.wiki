@@ -1,4 +1,4 @@
-#summary ChangLog v1.2
+#summary ChangeLog v1.2
 #labels ChangeLog
 
 
@@ -10,7 +10,7 @@
 	# l10n: support non-english language resources.
 	# change wizard icon.
 	# support modeless dialog.
-	# bugfix - uninitial var: `CComModule _Module`.
+	# bugfix - uninitial var: CComModule `_`Module.
 
 * Tutorials
 
@@ -19,7 +19,7 @@
 * WINX-Core
 
 	# MessageFilter
-		* property: `WINX_MSGFILTER, WINX_MSGFILTER_NULL`
+		* property: [WINX_MSGFILTER], [WINX_MSGFILTER WINX_MSGFILTER_NULL]
 		* function: RunMsgLoop
 		* class: MessageHook, AutoMessageHook (remove SimpleHook)
 		* class: MessageFilter
@@ -31,9 +31,9 @@
 		* property: `WINX_MAINFRAME`
 		* message: OnMainFrameTerm
 	# Modeless support (function: RunMsgLoop)
-	# `WINX_DLG_ACCEL -> WINX_ACCELFRAME`
+	# [WINX_DLG_ACCEL] -> [WINX_ACCELFRAME]
 	# Accel bugfix: Menu can't receive its keyboard messages after hooking.
 
 * STL-Extension
 
-	# remove `STD_DELETE` macro. use alloc.destroy(obj), instead of `STD_DELETE(alloc, obj)`.
+	# remove STD`_`DELETE macro. use alloc.destroy(obj), instead of STD`_`DELETE(alloc, obj).
