@@ -6,15 +6,15 @@
 
 * Wizard for Visual C++ 6.0
 
-	# enable/disable warning of directory tree.
-	# l10n: support non-english language resources.
-	# change wizard icon.
-	# support modeless dialog.
-	# bugfix - uninitial var: CComModule `_`Module.
+	# Enable/Disable warning of directory tree.
+	# L10n: support non-english language resources.
+	# Change wizard icon.
+	# Support modeless dialog.
+	# Bugfix - uninitial variable: CComModule `_`Module.
 
 * Tutorials
 
-	# Modeless Dialog Application		tutorials/winx/step022-modeless
+	# Modeless Dialog Application: tutorials/winx/step022-modeless
 
 * WINX-Core
 
@@ -23,12 +23,12 @@
 		* function: RunMsgLoop
 		* class: MessageHook, AutoMessageHook (remove SimpleHook)
 		* class: MessageFilter
-		* class: ModelessDialog default support MessageFilter
+		* class ModelessDialog support MessageFilter in default
 	# MainFrame
 		* ModalDialog -> ModelDialog
 		* ModalessDialog -> ModelessDialog
 		* class: MainDlgFrame, AxMainDlgFrame
-		* property: `WINX_MAINFRAME`
+		* property: [WINX_MAINFRAME]
 		* message: OnMainFrameTerm
 	# Modeless support (function: RunMsgLoop)
 	# [WINX_DLG_ACCEL] -> [WINX_ACCELFRAME]
@@ -36,4 +36,4 @@
 
 * STL-Extension
 
-	# remove STD`_`DELETE macro. use alloc.destroy(obj), instead of STD`_`DELETE(alloc, obj).
+	# Remove STD`_`DELETE macro. Use alloc.destroy(obj), instead of STD`_`DELETE(alloc, obj).
