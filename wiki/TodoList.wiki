@@ -24,3 +24,10 @@ The following are our plans of porting WinxGui:
 	# Port WinxGui to WinCE.
 	# Port WinxGui to Symbian OS series(eg. Nokia S60).
 	# Port WinxGui to Linux.
+	
+
+== WINX Manuals & Examples ==
+
+The following are our plans:
+	# Enrich this wiki. including developer manual references and technique articles covering the most popular problems.
+	# Provide more [Tutorials] and [Samples].
