@@ -1,5 +1,5 @@
-#summary Ideas about where will we go
-#labels TodoList, Featured
+#summary Ideas about where will we go.
+#labels TodoList,Featured
 
 
 == WYSIWYG(Visual) GUI development platform ==
@@ -16,12 +16,11 @@ The following are our plans of VisualGuiDev:
 
 == Porting WinxGui to multi platforms ==
 
-WinxGui is an EFFECTIVE GUI library. Here 'EFFECTIVE' mainly means to minimize size of the executable programs. And second, we focus how fast the programs run.
+WinxGui is an *EFFECTIVE* GUI library. Here *EFFECTIVE* mainly means to minimize size of the executable programs. And second, we focus how fast the programs run.
 
-Why should WinxGui be 'EFFECTIVE'? WinxGui aims to mobile GUI development markets. There are a great variety of brands and models of mobile. C/C++ are flexible and have the strongest ability to fit new platforms. Someone may think java is a better choice, but I don't think so. Java is a good language. But java isn't the best way of embedded system development(including mobile of course).
+Why should WinxGui be *EFFECTIVE*? WinxGui aims to mobile GUI development markets. There are a great variety of brands and models of mobile. C/C++ are flexible and have the strongest ability to fit new platforms. Someone may think java is a better choice, but I don't think so. Java is a good language. But java isn't the best way of embedded system development(including mobile of course).
 
 The following are our plans of porting WinxGui:
 	# Port WinxGui to WinCE.
 	# Port WinxGui to Symbian OS series(eg. Nokia S60).
 	# Port WinxGui to Linux.
-
