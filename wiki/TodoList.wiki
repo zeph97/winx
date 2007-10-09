@@ -14,7 +14,7 @@ The following are our plans of VisualGuiDev:
 	# Provide the official WYSIWYG(Visual) GUI development platform, maybe based on FreeCode.
 	
 
-== Porting WinxGui to multi platforms ==
+== Porting WINX to multi platforms ==
 
 WinxGui is an _EFFECTIVE_ GUI library. Here _EFFECTIVE_ mainly means to minimize size of the executable programs. And second, we focus how fast the programs run.
 
