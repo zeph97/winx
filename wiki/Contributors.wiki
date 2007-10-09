@@ -1,0 +1,2 @@
+#summary Contributors of WinxGui development
+#labels Contributors
