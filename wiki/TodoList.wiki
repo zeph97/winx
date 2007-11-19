@@ -6,7 +6,7 @@
 
 WinxGui focus the goal: MOST SIMPLE BUT EFFECTIVE. To be an WYSIWYG(Visual) GUI development platform is the most important target. For information about what WinxGui have done for visual GUI development, see [VisualGuiDev].
 
-There is a non-official visual GUI development tool named [FreeCode]. It is a addin of Visual Studio 6.0 / Visual Studio 2005. The contributors of FreeCode are QWL1996, who wrote the initial version (a addin of Visual Studio 6.0), and fox1996, who ported FreeCode to Visual Studio 2005.
+There is a non-official visual GUI development tool named [FreeCode](now it names [http://code.google.com/p/visualfc VisualFC]). It is a addin of Visual Studio 6.0 / Visual Studio 2005. The contributors of FreeCode are QWL1996, who wrote the initial version (a addin of Visual Studio 6.0), and fox1996, who ported FreeCode to Visual Studio 2005.
 
 The following are our plans of VisualGuiDev:
 	# Collect feedbacks from FreeCode users to improve it.
