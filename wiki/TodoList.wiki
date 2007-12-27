@@ -32,6 +32,6 @@ The following are our plans of porting [http://www.winxgui.com/winxgui WinxGui]:
 
 The following are our plans:
 	# Enrich this wiki. including developer manual references and technique articles covering the most popular problems.
-	# Provide more [Tutorials] and [Samples].
+	# Provide more [http://www.winxgui.com/tutorials Tutorials] and [http://www.winxgui.com/samples Samples].
 	# Provide non-english version documents, including [http://wiki.winxgui.cn/ Chinese Wiki].
 	
