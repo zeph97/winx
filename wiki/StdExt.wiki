@@ -1,4 +1,4 @@
-#STL Extensions Library
+#summary STL Extensions Library
 
 = Introduction =
 
