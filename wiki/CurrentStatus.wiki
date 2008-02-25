@@ -1,0 +1,11 @@
+#summary Current Development Status
+
+Here we show you where we are going.
+
+== [2008-02-24] Support virtual property programming ==
+
+See issue #16.
+
+== [2008-01-23] Create stdext project ==
+
+Seperate _[http://code.google.com/p/stdext/ stdext]_ from _[http://www.winxgui.com/winxgui WinxGui]_ project.
