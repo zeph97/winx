@@ -5,7 +5,7 @@ Here we show you where we are going.
 
 == [2008-02-24] Support virtual property programming ==
 
-See issue #16.
+See issue #16. And [http://cpp.winxgui.com/cn:UnitTest UnitTest] component add a macro: [http://cpp.winxgui.com/cn:WINX_AUTORUN_CLASS WINX_AUTORUN_CLASS].
 
 == [2008-01-23] Create stdext project ==
 
