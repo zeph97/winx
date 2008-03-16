@@ -3,6 +3,18 @@
 
 Here we show you where we are going.
 
+== [2008-03-16] Support [http://cpp.winxgui.com/cn:String String]/[http://cpp.winxgui.com/cn:StringBuilder StringBuilder], [http://cpp.winxgui.com/cn:TextPool TextPool], [http://cpp.winxgui.com/cn:Rope Rope] ==
+
+[http://cpp.winxgui.com/cn:String String]/[http://cpp.winxgui.com/cn:StringBuilder StringBuilder]: see issue #35.
+
+[http://cpp.winxgui.com/cn:TextPool TextPool]: see issue #38.
+
+[http://cpp.winxgui.com/cn:Rope Rope]: see issue #37.
+
+== [2008-03-11] Support [http://cpp.winxgui.com/cn:HashMap HashMap]/[http://cpp.winxgui.com/cn:HashMultiMap HashMultiMap]/[http://cpp.winxgui.com/cn:HashSet HashSet]/[http://cpp.winxgui.com/cn:HashMultiSet HashMultiSet] ==
+
+Support [http://cpp.winxgui.com/cn:HashMap HashMap]/[http://cpp.winxgui.com/cn:HashMultiMap HashMultiMap]/[http://cpp.winxgui.com/cn:HashSet HashSet]/[http://cpp.winxgui.com/cn:HashMultiSet HashMultiSet] for multi platforms (eg. windows/linux, vc++6.0/vc7/vc8, mingw/gcc, etc). See issue #32.
+
 == [2008-02-26] wtlport: Porting WTL to MinGW ==
 
 I start a new sublibrary of [http://www.winxgui.com/ WinxGui] named wtlport. Target: let winx support GCC series compilers. First step: Port WTL to MinGW. See issue #21.
