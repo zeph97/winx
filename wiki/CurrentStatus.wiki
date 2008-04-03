@@ -3,6 +3,18 @@
 
 Here we show you where we are going.
 
+== [2008-03-30] Support [http://cpp.winxgui.com/cn:Archive Archive], [http://cpp.winxgui.com/cn:Reader Reader]/[http://cpp.winxgui.com/cn:Writer Writer] ==
+
+[http://cpp.winxgui.com/cn:ReadArchive ReadArchive]/[http://cpp.winxgui.com/cn:WriteArchive WriteArchive], [http://cpp.winxgui.com/cn:Reader Reader]/[http://cpp.winxgui.com/cn:Writer Writer]
+
+[http://cpp.winxgui.com/cn:StdioReader StdioReader]/[http://cpp.winxgui.com/cn:StdioWriter StdioWriter], [http://cpp.winxgui.com/cn:PosixReader PosixReader]/[http://cpp.winxgui.com/cn:PosixWriter PosixWriter], [http://cpp.winxgui.com/cn:StreamReader StreamReader]/[http://cpp.winxgui.com/cn:StreamWriter StreamWriter]
+
+[http://cpp.winxgui.com/cn:MemReadArchive MemReadArchive]/[http://cpp.winxgui.com/cn:MemWriteArchive MemWriteArchive], [http://cpp.winxgui.com/cn:MemReader MemReader], [http://cpp.winxgui.com/cn:WinRegWriter WinRegWriter]/[http://cpp.winxgui.com/cn:WinRegReader WinRegReader]
+
+[http://cpp.winxgui.com/cn:RecordWriter RecordWriter]/[http://cpp.winxgui.com/cn:RecordReader RecordReader]
+
+See issue #41, issue #46.
+
 == [2008-03-16] Support [http://cpp.winxgui.com/cn:String String]/[http://cpp.winxgui.com/cn:StringBuilder StringBuilder], [http://cpp.winxgui.com/cn:TextPool TextPool], [http://cpp.winxgui.com/cn:Rope Rope] ==
 
 [http://cpp.winxgui.com/cn:String String]/[http://cpp.winxgui.com/cn:StringBuilder StringBuilder]: see issue #35.
