@@ -21,7 +21,7 @@ See issue #41, issue #46.
 
 [http://cpp.winxgui.com/cn:TextPool TextPool]: see issue #38.
 
-[http://cpp.winxgui.com/cn:Rope Rope]: see issue #37.
+[http://cpp.winxgui.com/cn:Rope Rope]: see issue #37, issue #49.
 
 == [2008-03-11] Support [http://cpp.winxgui.com/cn:HashMap HashMap]/[http://cpp.winxgui.com/cn:HashMultiMap HashMultiMap]/[http://cpp.winxgui.com/cn:HashSet HashSet]/[http://cpp.winxgui.com/cn:HashMultiSet HashMultiSet] ==
 
