@@ -1,5 +1,5 @@
 #summary Current Development Status
-#labels Featured,CurrentStatus,WinxGui
+#labels Deprecated,CurrentStatus,WinxGui
 
 Here we show you where we are going.
 
