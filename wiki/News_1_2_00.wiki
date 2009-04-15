@@ -1,0 +1,99 @@
+#summary News before winx-1.2.00
+#labels Deprecated,WinxGui,winx,News
+
+== [2008-09-01] Release [http://winx.googlecode.com/svn/tags/boost-memory-2.2.00/ boost-memory-2.2.00], [http://winx.googlecode.com/svn/tags/stdext-2.2.00/ stdext-2.2.00], [http://winx.googlecode.com/svn/tags/tpl-2.2.00/ tpl-2.2.00] ==
+
+Please download boost-memory-2.2.00, stdext-2.2.00 from [http://code.google.com/p/stdext/downloads/list here]. Download tpl-2.2.00 from [http://code.google.com/p/libtpl/downloads/list here].
+
+== [2008-06-21] Release [http://winx.googlecode.com/svn/tags/boostmm-1.0.00/ boostmm-1.0.00] & [http://winx.googlecode.com/svn/tags/tpl-1.0.00/ tpl-1.0.00] ==
+
+See http://code.google.com/p/boostmm/, http://code.google.com/p/libtpl/.
+
+== [2008-06-21] Release [http://winx.googlecode.com/svn/tags/boost-memory-1.0.00/ boost-memory-1.0.00] & [http://winx.googlecode.com/svn/tags/stdext-2.1.00/ stdext-2.1.00] ==
+
+Please download from [http://code.google.com/p/stdext/downloads/list here].
+
+== [2008-05-16] Release [http://winx.googlecode.com/svn/tags/boost-memory-0.2.00/ boost-memory-0.2.00] & [http://winx.googlecode.com/svn/tags/stdext-2.0.02/ stdext-2.0.02] ==
+
+See http://cpp.winxgui.com/boost-memory-0-2-00. Please download from [http://code.google.com/p/stdext/downloads/list here].
+
+== [2008-05-07] [http://svn.boost.org/svn/boost/sandbox/memory/ Boost memory sandbox] release v0.1.00 ==
+
+See issue #59. To gain the source code, you can:
+
+ # Download from [http://code.google.com/p/stdext/downloads/list here].
+ # Svn checkout http://winx.googlecode.com/svn/tags/boost-memory-0.1.00/.
+
+For detail information, refer to http://cpp.winxgui.com/boost-memory-0-1-00.
+
+And there is a patch for exception semantics & performance enhancement now:
+
+ * Svn checkout http://winx.googlecode.com/svn/tags/boost-memory-0.1.01/.
+
+== [2008-04-29] [http://xushiwei.com/gc-allocator GC Allocator] became a boost sandbox library ==
+
+To gain the source code, please svn checkout http://svn.boost.org/svn/boost/sandbox/memory/.
+
+Examples:
+
+ * [http://svn.boost.org/svn/boost/sandbox/memory/libs/memory/test/memory/simple_examples.cpp simple_examples.cpp]
+ * [http://svn.boost.org/svn/boost/sandbox/memory/libs/memory/test/memory/stl_containers.cpp stl_containers.cpp]
+
+== [2008-04-28] [http://winx.googlecode.com/svn/tags/boost-memory-0.0.01/ Boost memory pre-sandbox release 0.0.01] ==
+
+See issue #59. Download from [http://code.google.com/p/stdext/downloads/list here].
+
+== [2008-04-25] Support [http://cpp.winxgui.com/TLS TLS (Thread Local Storage)] ==
+
+See issue #57.
+And support [http://cpp.winxgui.com/TlsBlockPool TlsBlockPool] (issue #56).
+
+== [2008-04-21] Release [http://winx.googlecode.com/svn/tags/stdext-2.0.00/ stdext-2.0.00] ==
+
+See [http://code.google.com/p/stdext/wiki/ChangeLog_2_0_00 ChangeLog for stdext-2.0.00].
+
+== [2008-04-21] [http://xushiwei.com/gc-allocator C++ Memory Management Innovation: GC Allocator] ==
+
+To obtain a copy of this paper in pdf format click [http://xushiwei.com/local--files/gc-allocator/GCAllocator.pdf here] (or from [http://code.google.com/p/stdext/downloads/list google code]).
+
+Another copy is also available on [http://www.codeproject.com/KB/cpp/gc-allocator.aspx codeproject] in html format.
+
+== [2008-04-11] [http://cpp.winxgui.com/cn:Wrapper Wrapper]: reusing 3rdparty libraries ==
+
+I start a new sublibrary of [http://www.winxgui.com/ WinxGui] named wrapper. Target: reusing 3rdparty libraries, and incorporate them in [http://www.winxgui.com/ WinxGui]. See issue #52.
+
+== [2008-03-30] Support [http://cpp.winxgui.com/cn:Archive Archive], [http://cpp.winxgui.com/cn:Reader Reader]/[http://cpp.winxgui.com/cn:Writer Writer] ==
+
+[http://cpp.winxgui.com/cn:ReadArchive ReadArchive]/[http://cpp.winxgui.com/cn:WriteArchive WriteArchive], [http://cpp.winxgui.com/cn:Reader Reader]/[http://cpp.winxgui.com/cn:Writer Writer]
+
+[http://cpp.winxgui.com/cn:StdioReader StdioReader]/[http://cpp.winxgui.com/cn:StdioWriter StdioWriter], [http://cpp.winxgui.com/cn:PosixReader PosixReader]/[http://cpp.winxgui.com/cn:PosixWriter PosixWriter], [http://cpp.winxgui.com/cn:StreamReader StreamReader]/[http://cpp.winxgui.com/cn:StreamWriter StreamWriter]
+
+[http://cpp.winxgui.com/cn:MemReadArchive MemReadArchive]/[http://cpp.winxgui.com/cn:MemWriteArchive MemWriteArchive], [http://cpp.winxgui.com/cn:MemReader MemReader], [http://cpp.winxgui.com/cn:WinRegWriter WinRegWriter]/[http://cpp.winxgui.com/cn:WinRegReader WinRegReader]
+
+[http://cpp.winxgui.com/cn:RecordWriter RecordWriter]/[http://cpp.winxgui.com/cn:RecordReader RecordReader]
+
+See issue #41, issue #46.
+
+== [2008-03-16] Support [http://cpp.winxgui.com/cn:String String]/[http://cpp.winxgui.com/cn:StringBuilder StringBuilder], [http://cpp.winxgui.com/cn:TextPool TextPool], [http://cpp.winxgui.com/cn:Rope Rope] ==
+
+[http://cpp.winxgui.com/cn:String String]/[http://cpp.winxgui.com/cn:StringBuilder StringBuilder]: see issue #35.
+
+[http://cpp.winxgui.com/cn:TextPool TextPool]: see issue #38.
+
+[http://cpp.winxgui.com/cn:Rope Rope]: see issue #37, issue #49.
+
+== [2008-03-11] Support [http://cpp.winxgui.com/cn:HashMap HashMap]/[http://cpp.winxgui.com/cn:HashMultiMap HashMultiMap]/[http://cpp.winxgui.com/cn:HashSet HashSet]/[http://cpp.winxgui.com/cn:HashMultiSet HashMultiSet] ==
+
+Support [http://cpp.winxgui.com/cn:HashMap HashMap]/[http://cpp.winxgui.com/cn:HashMultiMap HashMultiMap]/[http://cpp.winxgui.com/cn:HashSet HashSet]/[http://cpp.winxgui.com/cn:HashMultiSet HashMultiSet] for multi platforms (eg. windows/linux, vc++6.0/vc7/vc8, mingw/gcc, etc). See issue #32.
+
+== [2008-02-28] Support Signal/Slot (AOP programming) ==
+
+The idea of event class implementation is from duyanning (see http://www.codeproject.com/cpp/simple_event.asp) and VisualFC (QWL2008). Thanks. See issue #26.
+
+== [2008-02-26] wtlport: Porting WTL to MinGW ==
+
+I start a new sublibrary of [http://www.winxgui.com/ WinxGui] named wtlport. Target: let winx support GCC series compilers. First step: Port WTL to MinGW. See issue #21.
+
+== [2008-01-23] Create stdext project ==
+
+Seperate _[http://code.google.com/p/stdext/ stdext]_ from _[http://www.winxgui.com/winxgui WinxGui]_ project.
