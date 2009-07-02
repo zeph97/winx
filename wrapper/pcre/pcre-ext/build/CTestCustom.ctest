@@ -1,5 +1,0 @@
-# This is a generated file.
-  SET(ENV{srcdir} C:/ebook-conv/wrapper/pcre/pcre)
-  SET(ENV{pcregrep} C:/ebook-conv/wrapper/pcre/pcre-ext/build/DEBUG/pcregrep.exe)
-  SET(ENV{pcretest} C:/ebook-conv/wrapper/pcre/pcre-ext/build/DEBUG/pcretest.exe)
-  
