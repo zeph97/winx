@@ -26,5 +26,13 @@
 #endif
 
 // -------------------------------------------------------------------------
+// Link pcre.lib
+
+#if !defined(Wrapper_Linked_pcre)
+#define Wrapper_Linked_pcre
+#pragma comment(lib, "pcre")
+#endif
+
+// -------------------------------------------------------------------------
 
 #endif /* WRAPPER_PCRE_H */
