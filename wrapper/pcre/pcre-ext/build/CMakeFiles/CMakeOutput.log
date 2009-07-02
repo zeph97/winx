@@ -1,0 +1,201 @@
+The system is: Windows - 5.1 - x86
+Determining if the C compiler works passed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\testCCompiler.c"
+testCCompiler.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\testCCompiler.obj" 
+
+cmTryCompileExec.exe - 0 error(s), 0 warning(s)
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\Program Files\CMake 2.6\share\cmake-2.6\Modules\CMakeCCompilerABI.c"
+CMakeCCompilerABI.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CMakeCCompilerABI.obj" 
+
+cmTryCompileExec.exe - 0 error(s), 0 warning(s)
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /GR /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TP /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+testCXXCompiler.cxx
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\testCXXCompiler.obj" 
+
+cmTryCompileExec.exe - 0 error(s), 0 warning(s)
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /GR /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TP /c 
+   "C:\Program Files\CMake 2.6\share\cmake-2.6\Modules\CMakeCXXCompilerABI.cpp"
+CMakeCXXCompilerABI.cpp
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CMakeCXXCompilerABI.obj" 
+
+cmTryCompileExec.exe - 0 error(s), 0 warning(s)
+
+
+Determining if the include file sys/stat.h exists passed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+CheckIncludeFile.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CheckIncludeFile.obj" 
+
+cmTryCompileExec.exe - 0 error(s), 0 warning(s)
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+CheckIncludeFile.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CheckIncludeFile.obj" 
+
+cmTryCompileExec.exe - 0 error(s), 0 warning(s)
+
+
+Determining if the include file windows.h exists passed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+CheckIncludeFile.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CheckIncludeFile.obj" 
+
+cmTryCompileExec.exe - 0 error(s), 0 warning(s)
+
+
+Determining if the function memmove exists passed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D CHECK_FUNCTION_EXISTS=memmove /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\Program Files\CMake 2.6\share\cmake-2.6\Modules\CheckFunctionExists.c"
+CheckFunctionExists.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CheckFunctionExists.obj" 
+
+cmTryCompileExec.exe - 0 error(s), 0 warning(s)
+
+
+Determining if the function strerror exists passed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D CHECK_FUNCTION_EXISTS=strerror /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\Program Files\CMake 2.6\share\cmake-2.6\Modules\CheckFunctionExists.c"
+CheckFunctionExists.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CheckFunctionExists.obj" 
+
+cmTryCompileExec.exe - 0 error(s), 0 warning(s)
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+CheckIncludeFile.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CheckIncludeFile.obj" 
+
+cmTryCompileExec.exe - 0 error(s), 0 warning(s)
+
+

@@ -1,0 +1,319 @@
+Determining if the include file dirent.h exists failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+CheckIncludeFile.c
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1) : fatal error C1083: Cannot open include file: 'dirent.h': No such file or directory
+Error executing cl.exe.
+
+cmTryCompileExec.exe - 1 error(s), 0 warning(s)
+
+
+Determining if the include file unistd.h exists failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+CheckIncludeFile.c
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1) : fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+Error executing cl.exe.
+
+cmTryCompileExec.exe - 1 error(s), 0 warning(s)
+
+
+Determining if the include file type_traits.h exists failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /GR /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TP /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx"
+CheckIncludeFile.cxx
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1) : fatal error C1083: Cannot open include file: 'type_traits.h': No such file or directory
+Error executing cl.exe.
+
+cmTryCompileExec.exe - 1 error(s), 0 warning(s)
+
+
+Determining if the include file bits/type_traits.h exists failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /GR /GX /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TP /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx"
+CheckIncludeFile.cxx
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.cxx(1) : fatal error C1083: Cannot open include file: 'bits/type_traits.h': No such file or directory
+Error executing cl.exe.
+
+cmTryCompileExec.exe - 1 error(s), 0 warning(s)
+
+
+Determining if the function bcopy exists failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D CHECK_FUNCTION_EXISTS=bcopy /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\Program Files\CMake 2.6\share\cmake-2.6\Modules\CheckFunctionExists.c"
+CheckFunctionExists.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CheckFunctionExists.obj" 
+CheckFunctionExists.obj : error LNK2001: unresolved external symbol _bcopy
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe : fatal error LNK1120: 1 unresolved externals
+Error executing link.exe.
+
+cmTryCompileExec.exe - 2 error(s), 0 warning(s)
+
+
+Determining if the function strtoll exists failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D CHECK_FUNCTION_EXISTS=strtoll /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\Program Files\CMake 2.6\share\cmake-2.6\Modules\CheckFunctionExists.c"
+CheckFunctionExists.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CheckFunctionExists.obj" 
+CheckFunctionExists.obj : error LNK2001: unresolved external symbol _strtoll
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe : fatal error LNK1120: 1 unresolved externals
+Error executing link.exe.
+
+cmTryCompileExec.exe - 2 error(s), 0 warning(s)
+
+
+Determining if the function strtoq exists failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D CHECK_FUNCTION_EXISTS=strtoq /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\Program Files\CMake 2.6\share\cmake-2.6\Modules\CheckFunctionExists.c"
+CheckFunctionExists.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CheckFunctionExists.obj" 
+CheckFunctionExists.obj : error LNK2001: unresolved external symbol _strtoq
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe : fatal error LNK1120: 1 unresolved externals
+Error executing link.exe.
+
+cmTryCompileExec.exe - 2 error(s), 0 warning(s)
+
+
+Determining if the function _strtoi64 exists failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D CHECK_FUNCTION_EXISTS=_strtoi64 /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\Program Files\CMake 2.6\share\cmake-2.6\Modules\CheckFunctionExists.c"
+CheckFunctionExists.c
+Linking...
+Microsoft (R) Incremental Linker Version 6.00.8447
+Copyright (C) Microsoft Corp 1992-1998. All rights reserved.
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /version:0.0 /stack:0x989680 /subsystem:console /incremental:yes "/pdb:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.pdb" /debug /machine:I386 "/out:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe" /pdbtype:sept /IGNORE:4089 /implib:C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug\cmTryCompileExec.lib 
+".\Debug\CheckFunctionExists.obj" 
+CheckFunctionExists.obj : error LNK2001: unresolved external symbol __strtoi64
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\Debug/cmTryCompileExec.exe : fatal error LNK1120: 1 unresolved externals
+Error executing link.exe.
+
+cmTryCompileExec.exe - 2 error(s), 0 warning(s)
+
+
+Determining if the include file stdint.h exists failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+CheckIncludeFile.c
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c(1) : fatal error C1083: Cannot open include file: 'stdint.h': No such file or directory
+Error executing cl.exe.
+
+cmTryCompileExec.exe - 1 error(s), 0 warning(s)
+
+
+Determining size of long long failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "HAVE_SYS_TYPES_H" /D "HAVE_STDDEF_H" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c"
+CheckTypeSizeC.c
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c(25) : error C2632: 'long' followed by 'long' is illegal
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c(26) : error C2632: 'long' followed by 'long' is illegal
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c(27) : error C2632: 'long' followed by 'long' is illegal
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c(28) : error C2632: 'long' followed by 'long' is illegal
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c(29) : error C2632: 'long' followed by 'long' is illegal
+Error executing cl.exe.
+
+cmTryCompileExec.exe - 5 error(s), 0 warning(s)
+
+CheckTypeSizeC.c:
+#define CHECK_TYPE_SIZE_TYPE long long
+#ifdef CHECK_TYPE_SIZE_TYPE
+
+
+#ifdef HAVE_SYS_TYPES_H
+#  include <sys/types.h>
+#endif /* HAVE_SYS_TYPES_H */
+
+#ifdef HAVE_STDINT_H
+#  include <stdint.h>
+#endif /* HAVE_STDINT_H */
+
+#ifdef HAVE_STDDEF_H
+#  include <stddef.h>
+#endif /* HAVE_STDDEF_H */
+
+
+
+#ifdef __CLASSIC_C__
+# define const
+#endif
+
+#define SIZE (sizeof(long long))
+const char info_sizeof[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','o','f','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)), 
+  ']','\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_sizeof[argc];
+  (void)argv;
+  return require;
+}
+
+#else  /* CHECK_TYPE_SIZE_TYPE */
+
+#  error "CHECK_TYPE_SIZE_TYPE has to specify the type"
+
+#endif /* CHECK_TYPE_SIZE_TYPE */
+
+
+Determining size of unsigned long long failed with the following output:
+Change Dir: C:/ebook-conv/wrapper/pcre/pcre-ext/build/CMakeFiles/CMakeTmp
+
+Run Build Command:C:\PROGRA~1\MIAF9D~1\Common\MSDev98\Bin\MSDEV.COM CMAKE_TRY_COMPILE.dsw /MAKE "cmTryCompileExec - Debug" /BUILD
+--------------------Configuration: cmTryCompileExec - Win32 Debug--------------------
+Compiling...
+Microsoft (R) 32-bit C/C++ Optimizing Compiler Version 12.00.8804 for 80x86
+Copyright (C) Microsoft Corp 1984-1998. All rights reserved.
+cl /MDd /W3 /Zi /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_WINDOWS" /D "HAVE_SYS_TYPES_H" /D "HAVE_STDDEF_H" /D "_MBCS" /D CMAKE_INTDIR=\"Debug\" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /Zm1000  /GZ  /TC /c 
+   "C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c"
+CheckTypeSizeC.c
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c(25) : error C2632: 'long' followed by 'long' is illegal
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c(26) : error C2632: 'long' followed by 'long' is illegal
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c(27) : error C2632: 'long' followed by 'long' is illegal
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c(28) : error C2632: 'long' followed by 'long' is illegal
+C:\ebook-conv\wrapper\pcre\pcre-ext\build\CMakeFiles\CMakeTmp\CheckTypeSizeC.c(29) : error C2632: 'long' followed by 'long' is illegal
+Error executing cl.exe.
+
+cmTryCompileExec.exe - 5 error(s), 0 warning(s)
+
+CheckTypeSizeC.c:
+#define CHECK_TYPE_SIZE_TYPE unsigned long long
+#ifdef CHECK_TYPE_SIZE_TYPE
+
+
+#ifdef HAVE_SYS_TYPES_H
+#  include <sys/types.h>
+#endif /* HAVE_SYS_TYPES_H */
+
+#ifdef HAVE_STDINT_H
+#  include <stdint.h>
+#endif /* HAVE_STDINT_H */
+
+#ifdef HAVE_STDDEF_H
+#  include <stddef.h>
+#endif /* HAVE_STDDEF_H */
+
+
+
+#ifdef __CLASSIC_C__
+# define const
+#endif
+
+#define SIZE (sizeof(unsigned long long))
+const char info_sizeof[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','o','f','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)), 
+  ']','\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_sizeof[argc];
+  (void)argv;
+  return require;
+}
+
+#else  /* CHECK_TYPE_SIZE_TYPE */
+
+#  error "CHECK_TYPE_SIZE_TYPE has to specify the type"
+
+#endif /* CHECK_TYPE_SIZE_TYPE */
+
+
