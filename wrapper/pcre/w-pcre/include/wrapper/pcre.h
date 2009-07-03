@@ -31,6 +31,10 @@
 #define PCRE_CALL	winx_call
 #endif
 
+#ifndef PCRE_SUBMATCH_MAX
+#define PCRE_SUBMATCH_MAX	32
+#endif
+
 // -------------------------------------------------------------------------
 // class PCRE
 
@@ -71,6 +75,7 @@ public:
 		return m_error;
 	}
 
+public:
 	__forceinline int PCRE_CALL match(
 		const String& subject, String submatches[], int max_count, int options = 0) const
 	{
@@ -79,7 +84,7 @@ public:
 
 	static int PCRE_CALL match(
 		const pcre* re, const pcre_extra* extra,
-		const String& subject, String submatches[], int max_count, int options = 0)
+		const String subject, String submatches[], int max_count, int options = 0)
 	{
 		WINX_ASSERT(re != NULL);
 		WINX_ASSERT(sizeof(String) >= sizeof(int)*2);
@@ -95,6 +100,88 @@ public:
 				subject.begin() + offsets[(i << 1) + 1]);
 		}
 		return n;
+	}
+
+private:
+	template <class Iterator>
+	static int PCRE_CALL atoi_(
+		Iterator first, Iterator last, Iterator& next, int val = 0)
+	{
+		for (; first != last && isdigit(*first); ++first)
+			val = val * 10 + (*first - '0');
+		next = first;
+		return val;
+	}
+
+public:
+	template <class StringBuilderT>
+	__forceinline bool PCRE_CALL replace(
+		StringBuilderT& dest, const String& subject, const String& pattern,
+		int options = 0, const char escch = '\\') const
+	{
+		return replace(m_re, NULL, dest, subject, pattern, options, escch);
+	}
+
+	template <class StringBuilderT>
+	static bool PCRE_CALL replace(
+		const pcre* re, const pcre_extra* extra,
+		StringBuilderT& dest, const String& subject, const String& pattern,
+		int options = 0, const char escch = '\\')
+	{
+		String submatches[PCRE_SUBMATCH_MAX];
+		const int count = match(re, extra, subject, submatches, countof(submatches), options);
+		if (count < 0)
+			return false;
+		return replace(dest, pattern, submatches, count, escch);
+	}
+
+	template <class StringBuilderT>
+	static bool PCRE_CALL replace(
+		StringBuilderT& dest, const String& pattern,
+		const String submatches[], int count, const char escch = '\\')
+	{
+		int i;
+		String::const_iterator it, from = pattern.begin();
+		String::const_iterator const to = pattern.end();
+		for (;;)
+		{
+			it = std::find(from, to, escch);
+			if (it == to)
+				break;
+
+			dest.insert(dest.end(), from, it);
+			if (++it == to) {
+				dest.push_back(escch);
+				return true;
+			}
+
+			if (isdigit(*it)) {
+				i = atoi_(it+1, to, from, *it - '0');
+			}
+			else if (*it == '{') {
+				i = atoi_(it+1, to, from);
+				if (from == to || *from != '}')
+					return false;
+				++from;
+			}
+			else if (*it == escch) {
+				dest.push_back(escch);
+				from = ++it;
+				continue;
+			}
+			else {
+				return false;
+			}
+
+			WINX_ASSERT(i >= 0 && i < count);
+			if (i >= count)
+				return false;
+
+			const String sub = submatches[i];
+			dest.insert(dest.end(), sub.begin(), sub.end());
+		}
+		dest.insert(dest.end(), from, to);
+		return true;
 	}
 };
 
@@ -119,6 +206,14 @@ public:
 		const String& subject, String submatches[], int max_count, int options = 0) const
 	{
 		return PCRE::match(m_re, m_re_extra, subject, submatches, max_count, options);
+	}
+
+	template <class StringBuilderT>
+	__forceinline bool PCRE_CALL replace(
+		StringBuilderT& dest, const String& subject, const String& pattern,
+		int options = 0, const char escch = '\\') const
+	{
+		return PCRE::replace(m_re, m_re_extra, dest, subject, pattern, options, escch);
 	}
 };
 

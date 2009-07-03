@@ -31,10 +31,21 @@ void test_pcre()
 		std::cout << s[i] << "\n";
 }
 
+void test_pcre_replace()
+{
+	using namespace NS_STDEXT;
+
+	std::vector<char> s;
+	const FastPCRE re("^(\\w+):(\\d+)$");
+	re.replace(s, g_str("ruby:1234"), g_str("Hello, \\2: language \\1"));
+	std::cout << TempString<char>(s) << "\n";
+}
+
 int main(int argc, const char* argv[])
 {
 	test_pcrecpp();
 	test_pcre();
+	test_pcre_replace();
 	return 0;
 }
 
