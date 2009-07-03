@@ -9,36 +9,26 @@
 // of this license. You must not remove this notice, or any other, from
 // this software.
 // 
-// Module: wrapper/pcrecpp.h
+// Module: wrapper/pcrecpp.cpp
 // Creator: xushiwei
 // Email: xushiweizh@gmail.com
 // Date: 2009-7-2 23:57:09
 // 
-// $Id: pcrecpp.h,v 2009-7-2 23:57:09 xushiwei Exp $
+// $Id: pcrecpp.cpp,v 2009-7-2 23:57:09 xushiwei Exp $
 // -----------------------------------------------------------------------*/
+#ifndef WRAPPER_PCRECPP_CPP
+#define WRAPPER_PCRECPP_CPP
+
+// -------------------------------------------------------------------------
+
 #ifndef WRAPPER_PCRECPP_H
-#define WRAPPER_PCRECPP_H
+#include "pcrecpp.h"
+#endif
+
+#include "pcrecpp/pcre_stringpiece.cc"
+#include "pcrecpp/pcre_scanner.cc"
+#include "pcrecpp/pcrecpp.cc"
 
 // -------------------------------------------------------------------------
 
-#ifndef WRAPPER_PCRE_H
-#include "pcre.h"
-#endif
-
-// -------------------------------------------------------------------------
-
-#ifndef _PCRECPPARG_H
-#include "pcrecpp/pcrecpparg.h"
-#endif
-
-#ifndef _PCRE_STRINGPIECE_H
-#include "pcrecpp/pcre_stringpiece.h"
-#endif
-
-#ifndef _PCRECPP_H
-#include "pcrecpp/pcrecpp.h"
-#endif
-
-// -------------------------------------------------------------------------
-
-#endif /* WRAPPER_PCRECPP_H */
+#endif /* WRAPPER_PCRECPP_CPP */

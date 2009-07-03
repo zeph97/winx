@@ -48,8 +48,13 @@
 #include <string>
 #include <vector>
 
+#ifndef _PCRECPP_H
 #include <pcrecpp.h>
+#endif
+
+#ifndef _PCRE_STRINGPIECE_H
 #include <pcre_stringpiece.h>
+#endif
 
 namespace pcrecpp {
 

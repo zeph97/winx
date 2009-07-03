@@ -21,6 +21,17 @@
 
 // -------------------------------------------------------------------------
 
+#ifdef __cplusplus
+#  ifndef PCRECPP_EXP_DECL
+#    define PCRECPP_EXP_DECL  extern
+#  endif
+#  ifndef PCRECPP_EXP_DEFN
+#    define PCRECPP_EXP_DEFN
+#  endif
+#endif
+
+// -------------------------------------------------------------------------
+
 #ifndef _PCRE_H
 #include "pcre/pcre.h"
 #endif
