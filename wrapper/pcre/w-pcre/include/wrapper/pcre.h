@@ -125,14 +125,25 @@ public:
 	template <class StringBuilderT>
 	static bool PCRE_CALL replace(
 		const pcre* re, const pcre_extra* extra,
-		StringBuilderT& dest, const String& subject, const String& pattern,
+		StringBuilderT& dest, String subject, const String& pattern,
 		int options = 0, const char escch = '\\')
 	{
 		String submatches[PCRE_SUBMATCH_MAX];
-		const int count = match(re, extra, subject, submatches, countof(submatches), options);
-		if (count < 0)
-			return false;
-		return replace(dest, pattern, submatches, count, escch);
+		for (;;)
+		{
+			const int count = match(
+				re, extra, subject, submatches, countof(submatches), options);
+			if (count < 0) {
+				dest.insert(dest.end(), subject.begin(), subject.end());
+				break;
+			}
+			dest.insert(dest.end(), subject.begin(), submatches[0].begin());
+			bool fOk = replace(dest, pattern, submatches, count, escch);
+			if (!fOk)
+				return false;
+			subject = String(submatches[0].end(), subject.end());
+		}
+		return true;
 	}
 
 	template <class StringBuilderT>

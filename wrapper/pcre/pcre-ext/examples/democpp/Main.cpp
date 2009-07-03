@@ -21,11 +21,21 @@ void test_pcrecpp()
 		std::cout << s << "\n" << i << "\n";
 }
 
-void test_pcre()
+void test_pcre_full_match()
 {
 	PCRE::String s[5];
 	const FastPCRE re("^(\\w+):(\\d+)$");
 	const int n = re.match(NS_STDEXT::g_str("ruby:1234"), s, countof(s));
+	std::cout << "n = " << n << "\n";
+	for (int i = 0; i < n; ++i)
+		std::cout << s[i] << "\n";
+}
+
+void test_pcre()
+{
+	PCRE::String s[5];
+	const FastPCRE re("\\[(\\w+):(\\d+)\\]");
+	const int n = re.match(NS_STDEXT::g_str("(ruby:1234)[ruby:1234]"), s, countof(s));
 	std::cout << "n = " << n << "\n";
 	for (int i = 0; i < n; ++i)
 		std::cout << s[i] << "\n";
@@ -36,14 +46,15 @@ void test_pcre_replace()
 	using namespace NS_STDEXT;
 
 	std::vector<char> s;
-	const FastPCRE re("^(\\w+):(\\d+)$");
-	re.replace(s, g_str("ruby:1234"), g_str("Hello, \\{2}5: language \\1"));
+	const FastPCRE re("(\\w+):(\\d+)");
+	re.replace(s, g_str("(ruby:1234)[ruby:1234]"), g_str("Hello, \\{2}5: language \\1"));
 	std::cout << TempString<char>(s) << "\n";
 }
 
 int main(int argc, const char* argv[])
 {
 	test_pcrecpp();
+	test_pcre_full_match();
 	test_pcre();
 	test_pcre_replace();
 	return 0;
