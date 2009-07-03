@@ -37,7 +37,7 @@ void test_pcre_replace()
 
 	std::vector<char> s;
 	const FastPCRE re("^(\\w+):(\\d+)$");
-	re.replace(s, g_str("ruby:1234"), g_str("Hello, \\2: language \\1"));
+	re.replace(s, g_str("ruby:1234"), g_str("Hello, \\{2}5: language \\1"));
 	std::cout << TempString<char>(s) << "\n";
 }
 
