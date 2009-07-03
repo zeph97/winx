@@ -1,12 +1,8 @@
 /* -------------------------------------------------------------------------
-// CppModel: C++ DOM Model
-// 
-// Module: pp/Main.cpp
+// Module: Main.cpp
 // Creator: xushiwei
 // Email: xushiweizh@gmail.com
-// Date: 2009-3-26 19:41:58
-// 
-// $Id: Main.cpp 619 2008-06-01 16:00:35Z xushiweizh $
+// Date: 2009-7-2 23:41:58
 // -----------------------------------------------------------------------*/
 
 #include <wrapper/pcrecpp.h>
