@@ -19,30 +19,73 @@
 #ifndef WRAPPER_PCRE_H
 #define WRAPPER_PCRE_H
 
-// -------------------------------------------------------------------------
+#ifndef WRAPPER_PCREAPI_H
+#include "pcreapi.h"
+#endif
 
-#ifdef __cplusplus
-#  ifndef PCRECPP_EXP_DECL
-#    define PCRECPP_EXP_DECL  extern
-#  endif
-#  ifndef PCRECPP_EXP_DEFN
-#    define PCRECPP_EXP_DEFN
-#  endif
+#ifndef STDEXT_TEXT_BASICSTRING_H
+#include "../../../stdext/include/stdext/text/BasicString.h"
+#endif
+
+#ifndef PCRE_CALL
+#define PCRE_CALL	winx_call
 #endif
 
 // -------------------------------------------------------------------------
+// class PCRE
 
-#ifndef _PCRE_H
-#include "pcre/pcre.h"
-#endif
+class PCRE
+{
+public:
+	struct Error
+	{
+		const char* message;
+		int offset;
+	};
 
-// -------------------------------------------------------------------------
-// Link pcre.lib
+	typedef NS_STDEXT::String String;
 
-#if !defined(Wrapper_Linked_pcre)
-#define Wrapper_Linked_pcre
-#pragma comment(lib, "pcre")
-#endif
+private:
+	pcre* m_re;
+	Error m_error;
+
+public:
+	PCRE(const char* pattern, int options = 0) {
+		m_re = pcre_compile(pattern, options, &m_error.message, &m_error.offset, NULL);
+	}
+	~PCRE()
+	{
+		if (m_re)
+			pcre_free(m_re);
+	}
+
+	bool PCRE_CALL good() const {
+		return m_re != NULL;
+	}
+
+	const Error& PCRE_CALL error() const {
+		return m_error;
+	}
+
+	int PCRE_CALL match(
+		const String& subject, String submatches[], int max_count, int options = 0) const
+	{
+		WINX_ASSERT(good());
+		WINX_ASSERT(sizeof(String) >= sizeof(int)*2);
+
+		int* offsets = (int*)(submatches + max_count) - (max_count << 1);
+		const int n = pcre_exec(
+			m_re, NULL, subject.data(), (int)subject.size(), 0,
+			options, offsets, (max_count << 1));
+		for (int i = 0; i < n; ++i)
+		{
+			submatches[i] = String(
+				subject.begin() + offsets[(i << 1)],
+				subject.begin() + offsets[(i << 1) + 1]);
+		}
+		return n;
+	}
+};
 
 // -------------------------------------------------------------------------
 

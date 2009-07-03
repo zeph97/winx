@@ -9,36 +9,41 @@
 // of this license. You must not remove this notice, or any other, from
 // this software.
 // 
-// Module: wrapper/pcrecpp.h
+// Module: wrapper/pcreapi.h
 // Creator: xushiwei
 // Email: xushiweizh@gmail.com
 // Date: 2009-7-2 23:57:09
 // 
-// $Id: pcrecpp.h,v 2009-7-2 23:57:09 xushiwei Exp $
+// $Id: pcreapi.h,v 2009-7-2 23:57:09 xushiwei Exp $
 // -----------------------------------------------------------------------*/
-#ifndef WRAPPER_PCRECPP_H
-#define WRAPPER_PCRECPP_H
-
-// -------------------------------------------------------------------------
-
 #ifndef WRAPPER_PCREAPI_H
-#include "pcreapi.h"
+#define WRAPPER_PCREAPI_H
+
+// -------------------------------------------------------------------------
+
+#ifdef __cplusplus
+#  ifndef PCRECPP_EXP_DECL
+#    define PCRECPP_EXP_DECL  extern
+#  endif
+#  ifndef PCRECPP_EXP_DEFN
+#    define PCRECPP_EXP_DEFN
+#  endif
 #endif
 
 // -------------------------------------------------------------------------
 
-#ifndef _PCRECPPARG_H
-#include "pcrecpp/pcrecpparg.h"
+#ifndef _PCRE_H
+#include "pcre/pcre.h"
 #endif
 
-#ifndef _PCRE_STRINGPIECE_H
-#include "pcrecpp/pcre_stringpiece.h"
-#endif
+// -------------------------------------------------------------------------
+// Link pcre.lib
 
-#ifndef _PCRECPP_H
-#include "pcrecpp/pcrecpp.h"
+#if !defined(Wrapper_Linked_pcre)
+#define Wrapper_Linked_pcre
+#pragma comment(lib, "pcre")
 #endif
 
 // -------------------------------------------------------------------------
 
-#endif /* WRAPPER_PCRECPP_H */
+#endif /* WRAPPER_PCREAPI_H */
