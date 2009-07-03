@@ -45,7 +45,7 @@ public:
 
 	typedef NS_STDEXT::String String;
 
-private:
+protected:
 	pcre* m_re;
 	Error m_error;
 
@@ -59,6 +59,10 @@ public:
 			pcre_free(m_re);
 	}
 
+	operator const pcre*() const {
+		return m_re;
+	}
+
 	bool PCRE_CALL good() const {
 		return m_re != NULL;
 	}
@@ -70,12 +74,19 @@ public:
 	int PCRE_CALL match(
 		const String& subject, String submatches[], int max_count, int options = 0) const
 	{
-		WINX_ASSERT(good());
+		return match(m_re, NULL, subject, submatches, max_count, options);
+	}
+
+	static int PCRE_CALL match(
+		const pcre* re, const pcre_extra* extra,
+		const String& subject, String submatches[], int max_count, int options = 0)
+	{
+		WINX_ASSERT(re != NULL);
 		WINX_ASSERT(sizeof(String) >= sizeof(int)*2);
 
 		int* offsets = (int*)(submatches + max_count) - (max_count << 1);
 		const int n = pcre_exec(
-			m_re, NULL, subject.data(), (int)subject.size(), 0,
+			re, extra, subject.data(), (int)subject.size(), 0,
 			options, offsets, (max_count << 1));
 		for (int i = 0; i < n; ++i)
 		{
@@ -84,6 +95,30 @@ public:
 				subject.begin() + offsets[(i << 1) + 1]);
 		}
 		return n;
+	}
+};
+
+// -------------------------------------------------------------------------
+// class FastPCRE
+
+class FastPCRE : public PCRE
+{
+protected:
+	pcre_extra* m_re_extra;
+
+public:
+	FastPCRE(const char* pattern, int options = 0) : PCRE(pattern, options) {
+		m_re_extra = (m_re ? pcre_study(m_re, 0, &m_error.message) : NULL);
+	}
+	~FastPCRE() {
+		if (m_re_extra)
+			pcre_free(m_re_extra);
+	}
+
+	int PCRE_CALL match(
+		const String& subject, String submatches[], int max_count, int options = 0) const
+	{
+		return PCRE::match(m_re, m_re_extra, subject, submatches, max_count, options);
 	}
 };
 

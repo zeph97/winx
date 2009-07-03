@@ -24,7 +24,7 @@ void test_pcrecpp()
 void test_pcre()
 {
 	PCRE::String s[5];
-	const PCRE re("^(\\w+):(\\d+)$");
+	const FastPCRE re("^(\\w+):(\\d+)$");
 	const int n = re.match(NS_STDEXT::g_str("ruby:1234"), s, countof(s));
 	std::cout << "n = " << n << "\n";
 	for (int i = 0; i < n; ++i)
