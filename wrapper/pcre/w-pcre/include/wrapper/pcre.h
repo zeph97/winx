@@ -71,7 +71,7 @@ public:
 		return m_error;
 	}
 
-	int PCRE_CALL match(
+	__forceinline int PCRE_CALL match(
 		const String& subject, String submatches[], int max_count, int options = 0) const
 	{
 		return match(m_re, NULL, subject, submatches, max_count, options);
@@ -115,7 +115,7 @@ public:
 			pcre_free(m_re_extra);
 	}
 
-	int PCRE_CALL match(
+	__forceinline int PCRE_CALL match(
 		const String& subject, String submatches[], int max_count, int options = 0) const
 	{
 		return PCRE::match(m_re, m_re_extra, subject, submatches, max_count, options);
