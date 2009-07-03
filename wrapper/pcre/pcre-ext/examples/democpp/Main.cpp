@@ -16,6 +16,11 @@
 
 int main(int argc, const char* argv[])
 {
+	int i;
+	string s;
+	pcrecpp::RE re("(\\w+):(\\d+)");
+	re.FullMatch("ruby:1234", &s, &i);
+	std::cout << s << "\n" << i << "\n";
 	return 0;
 }
 
