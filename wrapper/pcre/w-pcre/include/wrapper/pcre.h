@@ -134,7 +134,7 @@ private:
 
 public:
 	template <class StringBuilderT>
-	__forceinline bool PCRE_CALL replace(
+	__forceinline int PCRE_CALL replace(
 		StringBuilderT& dest, const String& subject, const String& pattern,
 		int options = 0, const char escch = '\\') const
 	{
@@ -142,12 +142,13 @@ public:
 	}
 
 	template <class StringBuilderT>
-	static bool PCRE_CALL replace(
+	static int PCRE_CALL replace(
 		const pcre* re, const pcre_extra* extra,
 		StringBuilderT& dest, String subject, const String& pattern,
 		int options = 0, const char escch = '\\')
 	{
 		String submatches[PCRE_SUBMATCH_MAX];
+		int n = 0;
 		for (;;)
 		{
 			const int count = match(
@@ -157,16 +158,16 @@ public:
 				break;
 			}
 			dest.insert(dest.end(), subject.begin(), submatches[0].begin());
-			const bool fOk = replace(dest, pattern, submatches, count, escch);
-			if (!fOk)
-				return false;
+			const bool fOk = template_gen(dest, pattern, submatches, count, escch);
+			if (!fOk) // failed!
+				return -1;
 			subject = String(submatches[0].end(), subject.end());
 		}
-		return true;
+		return n;
 	}
 
 	template <class StringBuilderT>
-	static bool PCRE_CALL replace(
+	static bool PCRE_CALL template_gen(
 		StringBuilderT& dest, const String& pattern,
 		const String submatches[], int count, const char escch = '\\')
 	{
@@ -200,6 +201,7 @@ public:
 				continue;
 			}
 			else {
+				WINX_ASSERT(false && "PCRE::replace - unknown escape-character!");
 				return false;
 			}
 
@@ -258,7 +260,7 @@ public:
 	}
 
 	template <class StringBuilderT>
-	__forceinline bool PCRE_CALL replace(
+	__forceinline int PCRE_CALL replace(
 		StringBuilderT& dest, const String& subject, const String& pattern,
 		int options = 0, const char escch = '\\') const
 	{
