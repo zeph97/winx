@@ -138,7 +138,7 @@ public:
 				break;
 			}
 			dest.insert(dest.end(), subject.begin(), submatches[0].begin());
-			bool fOk = replace(dest, pattern, submatches, count, escch);
+			const bool fOk = replace(dest, pattern, submatches, count, escch);
 			if (!fOk)
 				return false;
 			subject = String(submatches[0].end(), subject.end());
