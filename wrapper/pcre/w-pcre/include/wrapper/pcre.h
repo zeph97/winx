@@ -162,6 +162,7 @@ public:
 			if (!fOk) // failed!
 				return -1;
 			subject = String(submatches[0].end(), subject.end());
+			++n;
 		}
 		return n;
 	}
