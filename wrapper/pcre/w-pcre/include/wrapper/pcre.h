@@ -54,7 +54,7 @@ protected:
 	Error m_error;
 
 public:
-	PCRE(const char* pattern, int options = 0) {
+	explicit  PCRE(const char* pattern, int options = 0) {
 		m_re = pcre_compile(pattern, options, &m_error.message, &m_error.offset, NULL);
 	}
 	~PCRE()
@@ -205,7 +205,7 @@ protected:
 	pcre_extra* m_re_extra;
 
 public:
-	FastPCRE(const char* pattern, int options = 0) : PCRE(pattern, options) {
+	explicit FastPCRE(const char* pattern, int options = 0) : PCRE(pattern, options) {
 		m_re_extra = (m_re ? pcre_study(m_re, 0, &m_error.message) : NULL);
 	}
 	~FastPCRE() {
