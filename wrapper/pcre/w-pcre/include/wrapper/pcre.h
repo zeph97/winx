@@ -54,7 +54,9 @@ protected:
 	Error m_error;
 
 public:
-	explicit  PCRE(const char* pattern, int options = 0) {
+	PCRE() : m_re(NULL) {
+	}
+	explicit PCRE(const char* pattern, int options = 0) {
 		m_re = pcre_compile(pattern, options, &m_error.message, &m_error.offset, NULL);
 	}
 	~PCRE()
@@ -65,6 +67,19 @@ public:
 
 	operator const pcre*() const {
 		return m_re;
+	}
+
+	void PCRE_CALL clear() {
+		if (m_re) {
+			pcre_free(m_re);
+			m_re = NULL;
+		}
+	}
+
+	bool PCRE_CALL init(const char* pattern, int options = 0) {
+		WINX_ASSERT(m_re == NULL);
+		m_re = pcre_compile(pattern, options, &m_error.message, &m_error.offset, NULL);
+		return m_re != NULL;
 	}
 
 	bool PCRE_CALL good() const {
@@ -205,12 +220,31 @@ protected:
 	pcre_extra* m_re_extra;
 
 public:
+	FastPCRE() : m_re_extra(NULL) {}
 	explicit FastPCRE(const char* pattern, int options = 0) : PCRE(pattern, options) {
 		m_re_extra = (m_re ? pcre_study(m_re, 0, &m_error.message) : NULL);
 	}
 	~FastPCRE() {
 		if (m_re_extra)
 			pcre_free(m_re_extra);
+	}
+
+	void PCRE_CALL clear()
+	{
+		if (m_re_extra) {
+			pcre_free(m_re_extra);
+			m_re_extra = NULL;
+		}
+		PCRE::clear();
+	}
+
+	bool PCRE_CALL init(const char* pattern, int options = 0)
+	{
+		if (PCRE::init(pattern, options)) {
+			m_re_extra = (m_re ? pcre_study(m_re, 0, &m_error.message) : NULL);
+			return true;
+		}
+		return false;
 	}
 
 	__forceinline int PCRE_CALL match(
