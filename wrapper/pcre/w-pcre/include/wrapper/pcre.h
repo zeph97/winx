@@ -40,6 +40,10 @@
 
 class PCRE
 {
+private:
+	PCRE(const PCRE&);
+	void operator=(const PCRE&);
+
 public:
 	struct Error
 	{
