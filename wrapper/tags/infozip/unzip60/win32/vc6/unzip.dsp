@@ -1,6 +1,6 @@
 # Microsoft Developer Studio Project File - Name="unzip" - Package Owner=<4>
 # Microsoft Developer Studio Generated Build File, Format Version 6.00
-# ** DO NOT EDIT **
+# ** DO NOT EDIT MANUALLY **
 
 # TARGTYPE "Win32 (x86) Console Application" 0x0103
 
