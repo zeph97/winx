@@ -28,7 +28,7 @@ STDAPI_(void) _CppUnit_FilterCase(
 								  )
 {
 	if (1 !=  (int)szModuleName)
-		_g_szFilterModuleName = szModuleName;
+		_g_szFilterModuleName = wcslwr((LPWSTR)szModuleName);
 	
 	if (1 !=  (int)szTestClass)
 		_g_szFilterTestClass = szTestClass;
