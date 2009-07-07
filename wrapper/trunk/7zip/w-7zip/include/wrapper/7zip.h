@@ -25,6 +25,20 @@
 #include "7z/CPP/7zip/Archive/IArchive.h"
 #endif
 
+#ifndef assert
+#include <assert.h>
+#endif
+
+#ifndef NS7ZIP_CALL
+#define NS7ZIP_CALL
+#endif
+
+#ifndef NS7ZIP_ASSERT
+#define NS7ZIP_ASSERT(e)	assert(e)
+#endif
+
+// -------------------------------------------------------------------------
+
 namespace NS7zip {
 
 //
@@ -38,9 +52,29 @@ STDAPI CreateObject(const GUID* clsID, const GUID* interfaceID, void** outObject
 STDAPI CreateInFileStream(LPCWSTR szFile, IInStream** ppstm);
 
 //
+// Create OutFileStream
+//
+STDAPI CreateOutFileStream(LPCWSTR szFile, IOutStream** ppstm);
+
+//
+// ToUInt64
+//
+inline UINT64 NS7ZIP_CALL ToUInt64(const PROPVARIANT& prop)
+{
+	switch (prop.vt)
+	{
+	case VT_UI1: return prop.bVal;
+	case VT_UI2: return prop.uiVal;
+	case VT_UI4: return prop.ulVal;
+	case VT_UI8: return (UINT64)prop.uhVal.QuadPart;
+	default:	 return 0;
+	}
+}
+
+//
 // Create InFileArchive
 //
-inline HRESULT CreateInFileArchive(
+inline HRESULT NS7ZIP_CALL CreateInFileArchive(
 	LPCWSTR szFile, const GUID* clsID, IArchiveOpenCallback* callback, IInArchive** pinArchive)
 {
     IInArchive* inArchive = NULL;
@@ -89,7 +123,7 @@ public:
 //
 // Create InFileArchive
 //
-inline HRESULT CreateInFileArchive(
+inline HRESULT NS7ZIP_CALL CreateInFileArchive(
 	LPCWSTR szFile, const GUID* clsID, IInArchive** pinArchive)
 {
 	ArchiveOpenCallback callback;
@@ -97,10 +131,21 @@ inline HRESULT CreateInFileArchive(
 }
 
 //
+// Is directory?
+//
+inline bool NS7ZIP_CALL IsDirectory(IInArchive* inArchive, UInt32 i)
+{
+	PROPVARIANT prop;
+	PropVariantInit(&prop);
+	inArchive->GetProperty(i, kpidIsDir, &prop);
+	return prop.boolVal != VARIANT_FALSE;
+}
+
+//
 // List Archive
 //
 template <class ArchiveListT>
-inline void ListArchiveFiles(IInArchive* inArchive, ArchiveListT& ns)
+inline void NS7ZIP_CALL ListArchiveFiles(IInArchive* inArchive, ArchiveListT& ns)
 {
 	typedef typename ArchiveListT::value_type ItemT;
 
@@ -125,6 +170,71 @@ inline void ListArchiveFiles(IInArchive* inArchive, ArchiveListT& ns)
 	}
 }
 
+//
+// class ArchiveExtractCallback
+//
+class ArchiveExtractCallback : public IArchiveExtractCallback
+{
+private:
+	UInt32 m_index;
+	ISequentialOutStream* m_outStream;
+
+public:
+	ArchiveExtractCallback(UInt32 index, ISequentialOutStream* outStream)
+		: m_index(index), m_outStream(outStream) {
+	}
+
+	// IUnknown
+	STDMETHOD(QueryInterface)(REFIID iid, void** ppv) { return E_NOINTERFACE; }
+	STDMETHOD_(ULONG, AddRef)() { return 2; }
+	STDMETHOD_(ULONG, Release)() { return 1; }
+	
+	// IProgress
+	STDMETHOD(SetTotal)(UInt64 size) { return S_OK; }
+	STDMETHOD(SetCompleted)(const UInt64 *completeValue) { return S_OK; }
+	
+	// ICryptoGetTextPassword
+	STDMETHOD(CryptoGetTextPassword)(BSTR *aPassword) { return E_ABORT; }
+	
+	// IArchiveExtractCallback
+	STDMETHOD(GetStream)(UInt32 index, ISequentialOutStream** outStream, Int32 askExtractMode)
+	{
+		if (askExtractMode == NArchive::NExtract::NAskMode::kSkip) {
+			*outStream = NULL;
+			return S_OK;
+		}
+
+		NS7ZIP_ASSERT(askExtractMode == NArchive::NExtract::NAskMode::kExtract);
+		NS7ZIP_ASSERT(index == m_index);
+		*outStream = m_outStream;
+		m_outStream->AddRef();
+		return S_OK;
+	}
+	STDMETHOD(PrepareOperation)(Int32 askExtractMode) { return S_OK; }
+	STDMETHOD(SetOperationResult)(Int32 resultEOperationResult) { return S_OK; }
+};
+
+inline HRESULT NS7ZIP_CALL ExtractArchiveFile(IInArchive* inArchive, UInt32 index, ISequentialOutStream* outStream)
+{
+	NS7ZIP_ASSERT(!IsDirectory(inArchive, index));
+	ArchiveExtractCallback callback(index, outStream);
+	return inArchive->Extract(&index, 1, NArchive::NExtract::NAskMode::kExtract, &callback);
+}
+
+inline HRESULT NS7ZIP_CALL ExtractArchiveFile(IInArchive* inArchive, UInt32 index, LPCWSTR szFile)
+{
+	IOutStream* pstm;
+	HRESULT hr = CreateOutFileStream(szFile, &pstm);
+	if (hr != S_OK)
+		return hr;
+	hr = ExtractArchiveFile(inArchive, index, pstm);
+	pstm->Release();
+	return hr;
+}
+
+//
+// class InArchive
+//
 class InArchive
 {
 private:
@@ -151,20 +261,21 @@ public:
 			inArchive->Release();
 	}
 
-	bool good() const {
+	bool NS7ZIP_CALL good() const {
 		return inArchive != NULL;
 	}
 
-	HRESULT open(LPCWSTR szFile, const GUID* clsID, IArchiveOpenCallback* callback) {
+	HRESULT NS7ZIP_CALL open(LPCWSTR szFile, const GUID* clsID, IArchiveOpenCallback* callback) {
+		NS7ZIP_ASSERT(inArchive == NULL);
 		return CreateInFileArchive(szFile, clsID, callback, &inArchive);
 	}
 
-	HRESULT open(LPCWSTR szFile, const GUID* clsID) {
+	HRESULT NS7ZIP_CALL open(LPCWSTR szFile, const GUID* clsID) {
 		ArchiveOpenCallback callback;
 		CreateInFileArchive(szFile, clsID, &callback, &inArchive);
 	}
 
-	void close() {
+	void NS7ZIP_CALL close() {
 		if (inArchive) {
 			inArchive->Release();
 			inArchive = NULL;
@@ -172,8 +283,32 @@ public:
 	}
 
 	template <class ArchiveListT>
-	void ListFiles(ArchiveListT& ns) {
+	void NS7ZIP_CALL ListFiles(ArchiveListT& ns) const {
 		ListArchiveFiles(inArchive, ns);
+	}
+
+	HRESULT NS7ZIP_CALL ExtractFile(UInt32 index, ISequentialOutStream* outStream) const {
+		ExtractArchiveFile(inArchive, index, outStream);
+	}
+
+	HRESULT NS7ZIP_CALL ExtractFile(UInt32 index, LPCWSTR szDestFile) const {
+		ExtractArchiveFile(inArchive, index, szDestFile);
+	}
+
+	template <class ArchiveListT>
+	HRESULT NS7ZIP_CALL ExtractFile(const ArchiveListT& ns, LPCWSTR szSrcPath, ISequentialOutStream* outStream) const {
+		ArchiveListT::const_iterator it = ns.find(szSrcPath);
+		if (it == ns.end())
+			return E_INVALIDARG;
+		return ExtractArchiveFile(inArchive, (*it).second, outStream);
+	}
+
+	template <class ArchiveListT>
+	HRESULT NS7ZIP_CALL ExtractFile(const ArchiveListT& ns, LPCWSTR szSrcPath, LPCWSTR szDestFile) const {
+		ArchiveListT::const_iterator it = ns.find(szSrcPath);
+		if (it == ns.end())
+			return E_INVALIDARG;
+		return ExtractArchiveFile(inArchive, (*it).second, szDestFile);
 	}
 };
 
