@@ -131,10 +131,11 @@ private:
 	IInArchive* inArchive;
 
 public:
+	InArchive() : inArchive(NULL) {}
 	InArchive(LPCWSTR szFile, const GUID* clsID, IArchiveOpenCallback* callback)
 	{
 		inArchive = NULL;
-		CreateInFileArchive(szFile, clsID, &inArchive);
+		CreateInFileArchive(szFile, clsID, callback, &inArchive);
 	}
 
 	InArchive(LPCWSTR szFile, const GUID* clsID)
@@ -150,9 +151,30 @@ public:
 			inArchive->Release();
 	}
 
+	bool good() const {
+		return inArchive != NULL;
+	}
+
+	HRESULT open(LPCWSTR szFile, const GUID* clsID, IArchiveOpenCallback* callback) {
+		return CreateInFileArchive(szFile, clsID, callback, &inArchive);
+	}
+
+	HRESULT open(LPCWSTR szFile, const GUID* clsID) {
+		ArchiveOpenCallback callback;
+		CreateInFileArchive(szFile, clsID, &callback, &inArchive);
+	}
+
+	void close() {
+		if (inArchive) {
+			inArchive->Release();
+			inArchive = NULL;
+		}
+	}
+
 	template <class ArchiveListT>
-	void ListFiles(ArchiveListT& ns) {	ListArchiveFiles(inArchive, ns); }
-	bool good() const { return inArchive != NULL; }
+	void ListFiles(ArchiveListT& ns) {
+		ListArchiveFiles(inArchive, ns);
+	}
 };
 
 } // namespace
