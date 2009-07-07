@@ -99,3 +99,17 @@ STDAPI CreateInFileStream(LPCWSTR szFile, IInStream** ppstm)
 	*ppstm = NULL;
 	return E_ACCESSDENIED;
 }
+
+STDAPI CreateOutFileStream(LPCWSTR szFile, IOutStream** ppstm)
+{
+	COutFileStream *fileSpec = new COutFileStream;
+	if (fileSpec->Open(szFile, CREATE_ALWAYS))
+	{
+		fileSpec->AddRef();
+		*ppstm = fileSpec;
+		return S_OK;
+	}
+	delete fileSpec;
+	*ppstm = NULL;
+	return E_ACCESSDENIED;
+}
