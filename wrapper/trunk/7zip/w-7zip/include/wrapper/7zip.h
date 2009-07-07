@@ -125,6 +125,36 @@ inline void ListArchiveFiles(IInArchive* inArchive, ArchiveListT& ns)
 	}
 }
 
+class InArchive
+{
+private:
+	IInArchive* inArchive;
+
+public:
+	InArchive(LPCWSTR szFile, const GUID* clsID, IArchiveOpenCallback* callback)
+	{
+		inArchive = NULL;
+		CreateInFileArchive(szFile, clsID, &inArchive);
+	}
+
+	InArchive(LPCWSTR szFile, const GUID* clsID)
+	{
+		inArchive = NULL;
+		ArchiveOpenCallback callback;
+		CreateInFileArchive(szFile, clsID, &callback, &inArchive);
+	}
+
+	~InArchive()
+	{
+		if (inArchive)
+			inArchive->Release();
+	}
+
+	template <class ArchiveListT>
+	void ListFiles(ArchiveListT& ns) {	ListArchiveFiles(inArchive, ns); }
+	bool good() const { return inArchive != NULL; }
+};
+
 } // namespace
 
 // -------------------------------------------------------------------------

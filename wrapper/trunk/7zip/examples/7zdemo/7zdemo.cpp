@@ -268,19 +268,16 @@ UINT64 ToUInt64(const PROPVARIANT &prop)
 
 int main()
 {
-    IInArchive* inArchive = NULL;
-    if (NS7zip::CreateInFileArchive(L"D:\\vml-6-24.7z", &CLSID_CFormat7z, &inArchive) != S_OK)
+    NS7zip::InArchive ar(L"D:\\vml-6-24.7z", &CLSID_CFormat7z);
+	if (!ar.good())
 		return -1;
 
 	typedef std::map<std::wstring, UINT32> ArchiveList;
 
 	ArchiveList ns;
-	NS7zip::ListArchiveFiles(inArchive, ns);
+	ar.ListFiles(ns);
 	for (ArchiveList::iterator it = ns.begin(); it != ns.end(); ++it)
-	{
 		printf("%S\n", (*it).first.c_str());
-	}
 
-	inArchive->Release();
 	return 0;
 }
