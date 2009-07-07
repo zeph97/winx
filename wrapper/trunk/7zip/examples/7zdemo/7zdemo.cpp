@@ -283,55 +283,32 @@ UINT64 ToUInt64(const PROPVARIANT &prop)
 int main()
 {
 	CArchiveOpenCallback callback;
-
-	int result = -1;
     IInArchive* inArchive = NULL;
-    if (NS7zip::CreateObject(&CLSID_CFormat7z, &IID_IInArchive, (void **)&inArchive) != S_OK)
-    {
-		printf("Can not get class object\n");
+    if (NS7zip::CreateInFileArchive(L"D:\\vml-6-24.7z", &CLSID_CFormat7z, &callback, &inArchive) != S_OK)
 		return -1;
-    }
 
-	IInStream* inStm = NULL;
-	if (NS7zip::CreateInFileStream(L"D:\\vml-6-24.7z", &inStm) != S_OK)
+	// List command
+	UINT32 numItems = 0;
+	inArchive->GetNumberOfItems(&numItems);
+	for (UINT32 i = 0; i < numItems; i++)
 	{
-		inArchive->Release();
-		printf("Can not open inArchive file\n");
-		goto Error;
-	}
-
-	if (inArchive->Open(inStm, 0, &callback) != S_OK)
-	{
-        printf("Can not open inArchive\n");
-        goto Error;
-	}
-	{
-		// List command
-		UINT32 numItems = 0;
-		inArchive->GetNumberOfItems(&numItems);
-		for (UINT32 i = 0; i < numItems; i++)
+		UINT64 fileSize;
 		{
-			UINT64 fileSize;
-			{
-				// Get uncompressed size of file
-				PROPVARIANT prop;
-				PropVariantInit(&prop);
-				inArchive->GetProperty(i, kpidSize, &prop);
-				fileSize = ToUInt64(prop);
-			}
-			{
-				// Get name of file
-				PROPVARIANT prop;
-				PropVariantInit(&prop);
-				inArchive->GetProperty(i, kpidPath, &prop);
-				printf("%S: %I64d\n", prop.bstrVal, fileSize);
-				PropVariantClear(&prop);
-			}
+			// Get uncompressed size of file
+			PROPVARIANT prop;
+			PropVariantInit(&prop);
+			inArchive->GetProperty(i, kpidSize, &prop);
+			fileSize = ToUInt64(prop);
+		}
+		{
+			// Get name of file
+			PROPVARIANT prop;
+			PropVariantInit(&prop);
+			inArchive->GetProperty(i, kpidPath, &prop);
+			printf("%S: %I64d\n", prop.bstrVal, fileSize);
+			PropVariantClear(&prop);
 		}
 	}
-Error:
-	if (inStm)
-		inStm->Release();
 	inArchive->Release();
-	return result;
+	return 0;
 }
