@@ -1,9 +1,10 @@
 EXPORTS
-  CreateObject PRIVATE
-  GetHandlerProperty PRIVATE
-  GetNumberOfFormats PRIVATE
-  GetHandlerProperty2 PRIVATE
-  CreateObject PRIVATE
-  GetNumberOfMethods PRIVATE
-  GetMethodProperty PRIVATE
-  SetLargePageMode PRIVATE
+  CreateObject ; PRIVATE
+  GetHandlerProperty ; PRIVATE
+  GetNumberOfFormats ; PRIVATE
+  GetHandlerProperty2 ; PRIVATE
+  GetNumberOfMethods ; PRIVATE
+  GetMethodProperty ; PRIVATE
+  SetLargePageMode ; PRIVATE
+
+  CreateInFileStream

@@ -25,11 +25,19 @@
 #include "7z/CPP/7zip/Archive/IArchive.h"
 #endif
 
+namespace NS7zip {
+
 //
 // Create Object Instance
 //
-STDAPI_(UINT32) CreateObject(
-	const GUID* clsID, const GUID* interfaceID, void** outObject);
+STDAPI_(UINT32) CreateObject(const GUID* clsID, const GUID* interfaceID, void** outObject);
+
+//
+// Create InFileStream
+//
+STDAPI CreateInFileStream(LPCWSTR szFile, IInStream** ppstm);
+
+}
 
 // -------------------------------------------------------------------------
 // Link 7z.lib

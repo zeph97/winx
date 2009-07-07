@@ -78,3 +78,24 @@ STDAPI SetLargePageMode()
   #endif
   return S_OK;
 }
+
+//
+// by xushiweizh@gmail.com
+//
+
+#include "../Common/FileStreams.h"
+#include "../Common/FileStreams.cpp"
+
+STDAPI CreateInFileStream(LPCWSTR szFile, IInStream** ppstm)
+{
+    CInFileStream *fileSpec = new CInFileStream;
+	if (fileSpec->Open(szFile))
+	{
+		fileSpec->AddRef();
+		*ppstm = fileSpec;
+		return S_OK;
+	}
+	delete fileSpec;
+	*ppstm = NULL;
+	return E_ACCESSDENIED;
+}
