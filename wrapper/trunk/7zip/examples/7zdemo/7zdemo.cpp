@@ -2,9 +2,12 @@
 // 7zdemo
 
 #define INITGUID
+#pragma warning(disable:4786)
 #include <wrapper/7zip.h>
 #include <stdio.h>
 #include <windows.h>
+#include <map>
+#include <string>
 
 // use another CLSIDs, if you want to support other formats (zip, rar, ...).
 // {23170F69-40C1-278A-1000-000110070000}
@@ -287,28 +290,15 @@ int main()
     if (NS7zip::CreateInFileArchive(L"D:\\vml-6-24.7z", &CLSID_CFormat7z, &callback, &inArchive) != S_OK)
 		return -1;
 
-	// List command
-	UINT32 numItems = 0;
-	inArchive->GetNumberOfItems(&numItems);
-	for (UINT32 i = 0; i < numItems; i++)
+	typedef std::map<std::wstring, UINT32> ArchiveList;
+
+	ArchiveList ns;
+	NS7zip::ListArchiveFiles(inArchive, ns);
+	for (ArchiveList::iterator it = ns.begin(); it != ns.end(); ++it)
 	{
-		UINT64 fileSize;
-		{
-			// Get uncompressed size of file
-			PROPVARIANT prop;
-			PropVariantInit(&prop);
-			inArchive->GetProperty(i, kpidSize, &prop);
-			fileSize = ToUInt64(prop);
-		}
-		{
-			// Get name of file
-			PROPVARIANT prop;
-			PropVariantInit(&prop);
-			inArchive->GetProperty(i, kpidPath, &prop);
-			printf("%S: %I64d\n", prop.bstrVal, fileSize);
-			PropVariantClear(&prop);
-		}
+		printf("%S\n", (*it).first.c_str());
 	}
+
 	inArchive->Release();
 	return 0;
 }

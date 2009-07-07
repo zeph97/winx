@@ -44,7 +44,7 @@ inline HRESULT CreateInFileArchive(
 	LPCWSTR szFile, const GUID* clsID, IArchiveOpenCallback* callback, IInArchive** pinArchive)
 {
     IInArchive* inArchive = NULL;
-	HRESULT hr = NS7zip::CreateObject(clsID, &IID_IInArchive, (void **)&inArchive);
+	HRESULT hr = CreateObject(clsID, &IID_IInArchive, (void **)&inArchive);
     if (hr != S_OK)
 		return hr;
 	
@@ -65,6 +65,35 @@ inline HRESULT CreateInFileArchive(
 	}
 	*pinArchive = inArchive;
 	return S_OK;
+}
+
+//
+// List Archive
+//
+template <class ArchiveListT>
+inline void ListArchiveFiles(IInArchive* inArchive, ArchiveListT& ns)
+{
+	typedef typename ArchiveListT::value_type ItemT;
+
+	UINT32 numItems = 0;
+	inArchive->GetNumberOfItems(&numItems);
+	for (UINT32 i = 0; i < numItems; i++)
+	{
+		PROPVARIANT prop;
+		PropVariantInit(&prop);
+
+		// Is directory?
+		inArchive->GetProperty(i, kpidIsDir, &prop);
+		if (prop.boolVal != VARIANT_FALSE)
+			continue;
+
+		// Get name of file
+		if (inArchive->GetProperty(i, kpidPath, &prop) == S_OK)
+		{
+			ns.insert(ItemT(prop.bstrVal, i));
+			PropVariantClear(&prop);
+		}
+	}
 }
 
 } // namespace
