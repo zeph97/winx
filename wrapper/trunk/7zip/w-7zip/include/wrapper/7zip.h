@@ -271,6 +271,7 @@ public:
 	}
 
 	HRESULT NS7ZIP_CALL open(LPCWSTR szFile, const GUID* clsID) {
+		NS7ZIP_ASSERT(inArchive == NULL);
 		ArchiveOpenCallback callback;
 		CreateInFileArchive(szFile, clsID, &callback, &inArchive);
 	}
