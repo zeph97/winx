@@ -164,7 +164,7 @@ public:                                                                		\
     static void addTestsToSuite(TestSuiteBuilderContextBase* baseContext )	\
     {																		\
 		TestSuiteBuilderContextType* context;								\
-		_CppUnit_CreateTestSuiteBuilderContext(baseContext, &context)
+		_CppUnit_CreateTestSuiteBuilderContext(baseContext, &context);
 
 #define CPPUNIT_TEST(testMethod)											\
 		_CppUnit_AddTest(													\
@@ -172,7 +172,7 @@ public:                                                                		\
 			__getFixtureName(),												\
 			#testMethod,													\
 			(FnTestMethod)&TestFixtureType::testMethod						\
-			)
+			);
 
 #define CPPUNIT_TEST_EXCEPTION(testMethod, ExceptionType)
 

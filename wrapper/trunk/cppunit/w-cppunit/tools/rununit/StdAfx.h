@@ -12,7 +12,7 @@
 
 
 // TODO: reference additional headers your program requires here
-#include <cppunit/cppunit.h>
+#include <wrapper/cppunit.h>
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
