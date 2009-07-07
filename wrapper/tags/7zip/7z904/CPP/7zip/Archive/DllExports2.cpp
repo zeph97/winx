@@ -2,6 +2,7 @@
 
 #include "StdAfx.h"
 
+#define INITGUID
 #include "../../Common/MyInitGuid.h"
 #include "../../Common/ComTry.h"
 #include "../../Common/Types.h"

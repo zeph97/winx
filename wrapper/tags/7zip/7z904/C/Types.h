@@ -7,6 +7,7 @@
 #include <stddef.h>
 
 #ifdef _WIN32
+struct _RPC_ASYNC_STATE;
 #include <windows.h>
 #endif
 

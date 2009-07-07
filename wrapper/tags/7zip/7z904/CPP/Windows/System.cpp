@@ -14,7 +14,7 @@ UInt32 GetNumberOfProcessors()
   return (UInt32)systemInfo.dwNumberOfProcessors;
 }
 
-#if !defined(_WIN64) && defined(__GNUC__)
+#if !defined(_WIN64) && ((defined(_MSC_VER) && _MSC_VER <= 1200) || defined(__GNUC__))
 
 typedef struct _MY_MEMORYSTATUSEX {
   DWORD dwLength;
