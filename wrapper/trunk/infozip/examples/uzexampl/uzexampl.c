@@ -40,7 +40,8 @@
 #include <time.h>
 #include <string.h>
 #include "uzexampl.h"
-#include "../unzvers.h"
+#pragma comment(lib, "version.lib")
+
 #ifdef WIN32
 #  include <winver.h>
 #else
