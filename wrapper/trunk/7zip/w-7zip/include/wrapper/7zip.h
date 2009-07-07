@@ -83,7 +83,7 @@ inline HRESULT NS7ZIP_CALL CreateInFileArchive(
 		return hr;
 	
 	IInStream* inStm = NULL;
-	hr = NS7zip::CreateInFileStream(szFile, &inStm);
+	hr = CreateInFileStream(szFile, &inStm);
 	if (hr != S_OK)
 	{
 		inArchive->Release();
@@ -199,12 +199,11 @@ public:
 	// IArchiveExtractCallback
 	STDMETHOD(GetStream)(UInt32 index, ISequentialOutStream** outStream, Int32 askExtractMode)
 	{
-		if (askExtractMode == NArchive::NExtract::NAskMode::kSkip) {
+		if (askExtractMode != NArchive::NExtract::NAskMode::kExtract) {
 			*outStream = NULL;
 			return S_OK;
 		}
 
-		NS7ZIP_ASSERT(askExtractMode == NArchive::NExtract::NAskMode::kExtract);
 		NS7ZIP_ASSERT(index == m_index);
 		*outStream = m_outStream;
 		m_outStream->AddRef();
