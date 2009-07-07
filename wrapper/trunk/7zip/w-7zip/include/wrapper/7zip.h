@@ -68,6 +68,35 @@ inline HRESULT CreateInFileArchive(
 }
 
 //
+// class ArchiveOpenCallback
+//
+class ArchiveOpenCallback : public IArchiveOpenCallback
+{
+public:
+	// IUnknown
+	STDMETHOD(QueryInterface)(REFIID iid, void** ppv) { return E_NOINTERFACE; }
+	STDMETHOD_(ULONG, AddRef)() { return 2; }
+	STDMETHOD_(ULONG, Release)() { return 1; }
+	
+	// IArchiveOpenCallback
+	STDMETHOD(SetTotal)(const UInt64 *files, const UInt64 *bytes) { return S_OK; }
+	STDMETHOD(SetCompleted)(const UInt64 *files, const UInt64 *bytes) { return S_OK; }
+	
+	// ICryptoGetTextPassword
+	STDMETHOD(CryptoGetTextPassword)(BSTR *aPassword) { return E_ABORT; }
+};
+
+//
+// Create InFileArchive
+//
+inline HRESULT CreateInFileArchive(
+	LPCWSTR szFile, const GUID* clsID, IInArchive** pinArchive)
+{
+	ArchiveOpenCallback callback;
+	return CreateInFileArchive(szFile, clsID, &callback, pinArchive);
+}
+
+//
 // List Archive
 //
 template <class ArchiveListT>

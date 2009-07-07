@@ -14,23 +14,6 @@
 DEFINE_GUID(CLSID_CFormat7z,
 			0x23170F69, 0x40C1, 0x278A, 0x10, 0x00, 0x00, 0x01, 0x10, 0x07, 0x00, 0x00);
 
-class CArchiveOpenCallback :
-	public IArchiveOpenCallback //, public ICryptoGetTextPassword
-{
-public:
-	// IUnknown
-	STDMETHOD(QueryInterface)(REFIID iid, void** ppv) { return E_NOINTERFACE; }
-	STDMETHOD_(ULONG, AddRef)() { return 2; }
-	STDMETHOD_(ULONG, Release)() { return 1; }
-
-	// IArchiveOpenCallback
-	STDMETHOD(SetTotal)(const UInt64 *files, const UInt64 *bytes) { return S_OK; }
-	STDMETHOD(SetCompleted)(const UInt64 *files, const UInt64 *bytes) { return S_OK; }
-	
-	// ICryptoGetTextPassword
-	STDMETHOD(CryptoGetTextPassword)(BSTR *aPassword) { return E_ABORT; }
-};
-
 /*
 class CArchiveExtractCallback :
 	public IArchiveExtractCallback //, public ICryptoGetTextPassword
@@ -285,9 +268,8 @@ UINT64 ToUInt64(const PROPVARIANT &prop)
 
 int main()
 {
-	CArchiveOpenCallback callback;
     IInArchive* inArchive = NULL;
-    if (NS7zip::CreateInFileArchive(L"D:\\vml-6-24.7z", &CLSID_CFormat7z, &callback, &inArchive) != S_OK)
+    if (NS7zip::CreateInFileArchive(L"D:\\vml-6-24.7z", &CLSID_CFormat7z, &inArchive) != S_OK)
 		return -1;
 
 	typedef std::map<std::wstring, UINT32> ArchiveList;
