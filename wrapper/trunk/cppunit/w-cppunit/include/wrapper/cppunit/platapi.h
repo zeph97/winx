@@ -16,8 +16,8 @@
 // 
 // $Id: platapi.h,v 1.1 2006/11/30 08:45:42 xushiwei Exp $
 // -----------------------------------------------------------------------*/
-#ifndef __CPPUNIT_PLATAPI_H__
-#define __CPPUNIT_PLATAPI_H__
+#ifndef CPPUNIT_PLATAPI_H
+#define CPPUNIT_PLATAPI_H
 
 // -------------------------------------------------------------------------
 
@@ -252,4 +252,4 @@ STDAPI_(UINT) _CppUnit_BreakAlloc(UINT nAllocBreak);
 // -------------------------------------------------------------------------
 // $Log: platapi.h,v $
 
-#endif /* __CPPUNIT_PLATAPI_H__ */
+#endif /* CPPUNIT_PLATAPI_H */

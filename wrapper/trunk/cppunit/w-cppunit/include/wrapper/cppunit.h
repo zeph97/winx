@@ -16,8 +16,8 @@
 // 
 // $Id: cppunit.h,v 1.1 2006/11/30 08:45:42 xushiwei Exp $
 // -----------------------------------------------------------------------*/
-#ifndef __WRAPPER_CPPUNIT_H__
-#define __WRAPPER_CPPUNIT_H__
+#ifndef WRAPPER_CPPUNIT_H
+#define WRAPPER_CPPUNIT_H
 
 #if (0)
 #define X_RELEASE_CASE
@@ -28,19 +28,19 @@
 #define X_RELEASE_CASE
 #endif
 
-#ifndef __CPPUNIT_PLATAPI_H__
+#ifndef CPPUNIT_PLATAPI_H
 #include "cppunit/platapi.h"
 #endif
 
-#ifndef __CPPUNIT_BASIC_H__
+#ifndef CPPUNIT_BASIC_H
 #include "cppunit/basic.h"
 #endif
 
-#ifndef __CPPUNIT_LINKLIB_H__
+#ifndef CPPUNIT_LINKLIB_H
 #include "cppunit/linklib.h"
 #endif
 
 // -------------------------------------------------------------------------
 // $Log: cppunit.h,v $
 
-#endif /* __WRAPPER_CPPUNIT_H__ */
+#endif /* WRAPPER_CPPUNIT_H */

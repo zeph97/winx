@@ -16,13 +16,13 @@
 // 
 // $Id: linklib.h,v 1.1 2006/11/30 08:45:42 xushiwei Exp $
 // -----------------------------------------------------------------------*/
-#ifndef __CPPUNIT_LINKLIB_H__
-#define __CPPUNIT_LINKLIB_H__
+#ifndef CPPUNIT_LINKLIB_H
+#define CPPUNIT_LINKLIB_H
 
 // -------------------------------------------------------------------------
 
-#if !defined(__Linked_cppunit)
-#define __Linked_cppunit
+#if !defined(Wrapper_Linked_cppunit)
+#define Wrapper_Linked_cppunit
 #if defined(X_CC_BC)
 #	if defined(_WIN32)
 #		if defined(USES_KERN)
@@ -41,4 +41,4 @@
 // -------------------------------------------------------------------------
 // $Log: linklib.h,v $
 
-#endif /* __CPPUNIT_LINKLIB_H__ */
+#endif /* CPPUNIT_LINKLIB_H */

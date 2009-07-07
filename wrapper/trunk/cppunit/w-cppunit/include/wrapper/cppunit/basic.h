@@ -16,12 +16,12 @@
 // 
 // $Id: basic.h,v 1.1 2006/11/30 08:45:42 xushiwei Exp $
 // -----------------------------------------------------------------------*/
-#ifndef __CPPUNIT_BASIC_H__
-#define __CPPUNIT_BASIC_H__
+#ifndef CPPUNIT_BASIC_H
+#define CPPUNIT_BASIC_H
 
 // -------------------------------------------------------------------------
 
-#ifndef __CPPUNIT_PLATAPI_H__
+#ifndef CPPUNIT_PLATAPI_H
 #include "platapi.h"
 #endif
 
@@ -337,4 +337,4 @@ private:
 // =========================================================================
 // $Log: basic.h,v $
 
-#endif /* __CPPUNIT_BASIC_H__ */
+#endif /* CPPUNIT_BASIC_H */
