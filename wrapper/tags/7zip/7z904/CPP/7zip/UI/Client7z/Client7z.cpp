@@ -2,6 +2,7 @@
 
 #include "StdAfx.h"
 
+#define INITGUID
 #include "Common/IntToString.h"
 #include "Common/MyInitGuid.h"
 #include "Common/StringConvert.h"
