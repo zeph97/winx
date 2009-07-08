@@ -234,6 +234,44 @@ inline HRESULT NS7ZIP_CALL ExtractArchiveFile(IInArchive* inArchive, UInt32 inde
 }
 
 //
+// class LimitedMemoryStream
+//
+class LimitedMemoryStream : public ISequentialOutStream
+{
+private:
+	char* m_buf;
+	char* m_bufEnd;
+
+public:
+	LimitedMemoryStream(char* buf, UInt32 cb)
+		: m_buf(buf), m_bufEnd(buf + cb) {
+	}
+
+	// IUnknown
+	STDMETHOD(QueryInterface)(REFIID iid, void** ppv) { return E_NOINTERFACE; }
+	STDMETHOD_(ULONG, AddRef)() { return 2; }
+	STDMETHOD_(ULONG, Release)() { return 1; }
+
+	// ISequentialOutStream
+	STDMETHOD(Write)(const void *data, UInt32 size, UInt32 *processedSize)
+	{
+		if ((m_bufEnd - m_buf) <= size) {
+			memcpy(m_buf, data, size);
+			*processedSize = size;
+			m_buf += size;
+		}
+		else {
+			if (m_buf >= m_bufEnd)
+				return E_ACCESSDENIED;
+			memcpy(m_buf, data, m_bufEnd - m_buf);
+			*processedSize = m_bufEnd - m_buf;
+			m_buf = m_bufEnd;
+		}
+		return S_OK;
+	}
+};
+
+//
 // class InArchive
 //
 class InArchive
@@ -311,6 +349,22 @@ public:
 		if (it == ns.end())
 			return E_INVALIDARG;
 		return ExtractArchiveFile(inArchive, (*it).second, szDestFile);
+	}
+
+	template <class ArchiveListT, class OutBufferT> // OutBufferT = std::vector<char>
+	HRESULT NS7ZIP_CALL ExtractFile(const ArchiveListT& ns, LPCWSTR szSrcPath, OutBufferT& outBuffer) const
+	{
+		ArchiveListT::const_iterator it = ns.find(szSrcPath);
+		if (it == ns.end())
+			return E_INVALIDARG;
+		const UInt32 index = (*it).second;
+		PROPVARIANT prop;
+		PropVariantClear(&prop);
+		inArchive->GetProperty(index, kpidSize, &prop);
+		const UInt32 size = (UInt32)ToUInt64(prop);
+		outBuffer.resize(size);
+		LimitedMemoryStream stm(std::_ConvIt(outBuffer.begin()), size);
+		return ExtractArchiveFile(inArchive, index, &stm);
 	}
 };
 
