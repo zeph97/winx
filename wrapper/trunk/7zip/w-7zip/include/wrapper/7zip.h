@@ -77,8 +77,10 @@ inline UINT64 NS7ZIP_CALL ToUInt64(const PROPVARIANT& prop)
 inline HRESULT NS7ZIP_CALL CreateInFileArchive(
 	LPCWSTR szFile, const GUID* clsID, IArchiveOpenCallback* callback, IInArchive** pinArchive)
 {
+	struct __declspec(uuid("{23170F69-40C1-278A-0000-000600600000}")) IInArchive_;
+
     IInArchive* inArchive = NULL;
-	HRESULT hr = CreateObject(clsID, &IID_IInArchive, (void **)&inArchive);
+	HRESULT hr = CreateObject(clsID, &__uuidof(IInArchive_), (void **)&inArchive);
     if (hr != S_OK)
 		return hr;
 	
@@ -272,7 +274,7 @@ public:
 	HRESULT NS7ZIP_CALL open(LPCWSTR szFile, const GUID* clsID) {
 		NS7ZIP_ASSERT(inArchive == NULL);
 		ArchiveOpenCallback callback;
-		CreateInFileArchive(szFile, clsID, &callback, &inArchive);
+		return CreateInFileArchive(szFile, clsID, &callback, &inArchive);
 	}
 
 	void NS7ZIP_CALL close() {
@@ -288,11 +290,11 @@ public:
 	}
 
 	HRESULT NS7ZIP_CALL ExtractFile(UInt32 index, ISequentialOutStream* outStream) const {
-		ExtractArchiveFile(inArchive, index, outStream);
+		return ExtractArchiveFile(inArchive, index, outStream);
 	}
 
 	HRESULT NS7ZIP_CALL ExtractFile(UInt32 index, LPCWSTR szDestFile) const {
-		ExtractArchiveFile(inArchive, index, szDestFile);
+		return ExtractArchiveFile(inArchive, index, szDestFile);
 	}
 
 	template <class ArchiveListT>
