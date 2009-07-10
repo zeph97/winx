@@ -255,7 +255,7 @@ public:
 	// ISequentialOutStream
 	STDMETHOD(Write)(const void *data, UInt32 size, UInt32 *processedSize)
 	{
-		if ((m_bufEnd - m_buf) <= size) {
+		if (size <= (m_bufEnd - m_buf)) {
 			memcpy(m_buf, data, size);
 			*processedSize = size;
 			m_buf += size;
@@ -268,6 +268,14 @@ public:
 			m_buf = m_bufEnd;
 		}
 		return S_OK;
+	}
+
+	const char* end() const {
+		return m_buf;
+	}
+
+	bool done() const {
+		return m_buf == m_bufEnd;
 	}
 };
 
@@ -363,7 +371,8 @@ public:
 		inArchive->GetProperty(index, kpidSize, &prop);
 		const UInt32 size = (UInt32)ToUInt64(prop);
 		outBuffer.resize(size);
-		LimitedMemoryStream stm(std::_ConvIt(outBuffer.begin()), size);
+		char* buffer = std::_ConvIt(outBuffer.begin());
+		LimitedMemoryStream stm(buffer, size);
 		return ExtractArchiveFile(inArchive, index, &stm);
 	}
 };
