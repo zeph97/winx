@@ -76,6 +76,20 @@ inline LPCWSTR _CppUnit_GetModuleName()
 }
 
 // -------------------------------------------------------------------------
+// _CppUnit_GetSystemIniPath
+
+inline LPCWSTR _CppUnit_GetSystemIniPath(LPWSTR path, LPCWSTR relationName)
+{
+	LPCWSTR root = _CppUnit_GetModuleName();
+	wcscpy(path, root);
+	wcscpy(
+		wcsrchr(path, '\\') + 1,
+		relationName
+		);	
+	return path;
+}
+
+// -------------------------------------------------------------------------
 // _CppUnit_Abort
 
 #if defined(_DEBUG)
