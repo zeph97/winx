@@ -255,7 +255,7 @@ public:
 	// ISequentialOutStream
 	STDMETHOD(Write)(const void *data, UInt32 size, UInt32 *processedSize)
 	{
-		if (size <= (m_bufEnd - m_buf)) {
+		if (size <= (UInt32)(m_bufEnd - m_buf)) {
 			memcpy(m_buf, data, size);
 			*processedSize = size;
 			m_buf += size;
