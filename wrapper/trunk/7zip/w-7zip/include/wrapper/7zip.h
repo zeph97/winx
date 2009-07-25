@@ -19,6 +19,8 @@
 #ifndef WRAPPER_7ZIP_H
 #define WRAPPER_7ZIP_H
 
+#pragma warning(disable:4786)
+
 // -------------------------------------------------------------------------
 
 #ifndef __IARCHIVE_H
