@@ -371,8 +371,9 @@ public:
 		inArchive->GetProperty(index, kpidSize, &prop);
 		const UInt32 size = (UInt32)ToUInt64(prop);
 		outBuffer.resize(size);
-		char* buffer = std::_ConvIt(outBuffer.begin());
-		LimitedMemoryStream stm(buffer, size);
+		if (size == 0)
+			return S_OK;
+		LimitedMemoryStream stm(&outBuffer[0], size);
 		return ExtractArchiveFile(inArchive, index, &stm);
 	}
 };
