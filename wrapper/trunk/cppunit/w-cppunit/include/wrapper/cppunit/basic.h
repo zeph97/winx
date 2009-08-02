@@ -75,6 +75,14 @@ inline LPCWSTR _CppUnit_GetModuleName()
 	return szModule;
 }
 
+inline LPCSTR _CppUnit_GetModuleNameA()
+{
+	static CHAR szModule[_MAX_PATH];
+	static int cch = GetModuleFileNameA(
+		_CppUnit_GetModuleHandleEx((void*)_CppUnit_DummyFunction), szModule, _MAX_PATH);
+	return szModule;
+}
+
 // -------------------------------------------------------------------------
 // _CppUnit_GetSystemIniPath
 
@@ -84,6 +92,17 @@ inline LPCWSTR _CppUnit_GetSystemIniPath(LPWSTR path, LPCWSTR relationName)
 	wcscpy(path, root);
 	wcscpy(
 		wcsrchr(path, '\\') + 1,
+		relationName
+		);	
+	return path;
+}
+
+inline LPCSTR _CppUnit_GetSystemIniPath(LPSTR path, LPCSTR relationName)
+{
+	LPCSTR root = _CppUnit_GetModuleNameA();
+	strcpy(path, root);
+	strcpy(
+		strrchr(path, '\\') + 1,
 		relationName
 		);	
 	return path;
