@@ -20,7 +20,7 @@
 #define WRAPPER_ZLIB_H
 
 #ifndef STDEXT_BASIC_H
-#include "../../../../stdext/include/stdext/Basic.h"
+#include "../../../stdext/include/stdext/Basic.h"
 #endif
 
 #ifndef ZLIB_H
