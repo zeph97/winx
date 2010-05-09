@@ -89,7 +89,7 @@ STDAPI SetLargePageMode()
 STDAPI CreateInFileStream(LPCWSTR szFile, IInStream** ppstm)
 {
     CInFileStream *fileSpec = new CInFileStream;
-	if (fileSpec->Open(szFile))
+	if (fileSpec->OpenShared(szFile, true))
 	{
 		fileSpec->AddRef();
 		*ppstm = fileSpec;
